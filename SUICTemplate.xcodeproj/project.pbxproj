@@ -17,13 +17,14 @@
 		9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA523F1DD1D006AC63A /* LoginPresenter.swift */; };
 		9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA623F1DD1D006AC63A /* LoginRouter.swift */; };
 		9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA723F1DD1D006AC63A /* LoginModuleApi.swift */; };
-		9C974BAD23F1DD1D006AC63A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */; };
 		9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA923F1DD1D006AC63A /* LoginView.swift */; };
 		9C974BB123F1DD68006AC63A /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BB023F1DD68006AC63A /* AppModules.swift */; };
+		9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BB923F1E7BF006AC63A /* UserSettings.swift */; };
+		9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9C974B8B23F1DBDE006AC63A /* SwiftUI-Combine-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Combine-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUICTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9C974B9223F1DBDE006AC63A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9C974BA923F1DD1D006AC63A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9C974BB023F1DD68006AC63A /* AppModules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModules.swift; sourceTree = "<group>"; };
+		9C974BB923F1E7BF006AC63A /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,7 @@
 		9C974B8223F1DBDD006AC63A = {
 			isa = PBXGroup;
 			children = (
-				9C974B8D23F1DBDE006AC63A /* SwiftUI-Combine-Template */,
+				9C974B8D23F1DBDE006AC63A /* SUICTemplate */,
 				9C974B8C23F1DBDE006AC63A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,12 +64,12 @@
 		9C974B8C23F1DBDE006AC63A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C974B8B23F1DBDE006AC63A /* SwiftUI-Combine-Template.app */,
+				9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C974B8D23F1DBDE006AC63A /* SwiftUI-Combine-Template */ = {
+		9C974B8D23F1DBDE006AC63A /* SUICTemplate */ = {
 			isa = PBXGroup;
 			children = (
 				9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */,
@@ -77,10 +79,11 @@
 				9C974B9923F1DBDE006AC63A /* LaunchScreen.storyboard */,
 				9C974B9C23F1DBDE006AC63A /* Info.plist */,
 				9C974BB023F1DD68006AC63A /* AppModules.swift */,
-				9C974BAF23F1DD24006AC63A /* Login */,
+				9C974BB623F1E79A006AC63A /* ViewModels */,
+				9C974BB723F1E7A8006AC63A /* Modules */,
 				9C974B9623F1DBDE006AC63A /* Preview Content */,
 			);
-			path = "SwiftUI-Combine-Template";
+			path = SUICTemplate;
 			sourceTree = "<group>";
 		};
 		9C974B9623F1DBDE006AC63A /* Preview Content */ = {
@@ -103,12 +106,28 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		9C974BB623F1E79A006AC63A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9C974BB923F1E7BF006AC63A /* UserSettings.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9C974BB723F1E7A8006AC63A /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9C974BAF23F1DD24006AC63A /* Login */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C974B8A23F1DBDD006AC63A /* SwiftUI-Combine-Template */ = {
+		9C974B8A23F1DBDD006AC63A /* SUICTemplate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C974B9F23F1DBDE006AC63A /* Build configuration list for PBXNativeTarget "SwiftUI-Combine-Template" */;
+			buildConfigurationList = 9C974B9F23F1DBDE006AC63A /* Build configuration list for PBXNativeTarget "SUICTemplate" */;
 			buildPhases = (
 				9C974B8723F1DBDD006AC63A /* Sources */,
 				9C974B8823F1DBDD006AC63A /* Frameworks */,
@@ -119,12 +138,12 @@
 			);
 			dependencies = (
 			);
-			name = "SwiftUI-Combine-Template";
+			name = SUICTemplate;
 			packageProductDependencies = (
 				9C974BA323F1DCCF006AC63A /* Viperit */,
 			);
 			productName = "SwiftUI-Combine-Template";
-			productReference = 9C974B8B23F1DBDE006AC63A /* SwiftUI-Combine-Template.app */;
+			productReference = 9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,7 +161,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C974B8623F1DBDD006AC63A /* Build configuration list for PBXProject "SwiftUI-Combine-Template" */;
+			buildConfigurationList = 9C974B8623F1DBDD006AC63A /* Build configuration list for PBXProject "SUICTemplate" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -158,7 +177,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C974B8A23F1DBDD006AC63A /* SwiftUI-Combine-Template */,
+				9C974B8A23F1DBDD006AC63A /* SUICTemplate */,
 			);
 		};
 /* End PBXProject section */
@@ -204,12 +223,13 @@
 			files = (
 				9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
-				9C974BAD23F1DD1D006AC63A /* LoginInteractor.swift in Sources */,
+				9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */,
 				9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
 				9C974BB123F1DD68006AC63A /* AppModules.swift in Sources */,
 				9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */,
+				9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */,
 				9C974B9323F1DBDE006AC63A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,10 +367,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Combine-Template/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SUICTemplate/Preview Content\"";
 				DEVELOPMENT_TEAM = U96GUE2A6L;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI-Combine-Template/Info.plist";
+				INFOPLIST_FILE = SUICTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -367,10 +387,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-Combine-Template/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SUICTemplate/Preview Content\"";
 				DEVELOPMENT_TEAM = U96GUE2A6L;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "SwiftUI-Combine-Template/Info.plist";
+				INFOPLIST_FILE = SUICTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -385,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C974B8623F1DBDD006AC63A /* Build configuration list for PBXProject "SwiftUI-Combine-Template" */ = {
+		9C974B8623F1DBDD006AC63A /* Build configuration list for PBXProject "SUICTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C974B9D23F1DBDE006AC63A /* Debug */,
@@ -394,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C974B9F23F1DBDE006AC63A /* Build configuration list for PBXNativeTarget "SwiftUI-Combine-Template" */ = {
+		9C974B9F23F1DBDE006AC63A /* Build configuration list for PBXNativeTarget "SUICTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C974BA023F1DBDE006AC63A /* Debug */,

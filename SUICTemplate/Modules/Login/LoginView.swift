@@ -9,10 +9,10 @@
 import SwiftUI
 import Viperit
 
-//MARK: LoginView SwiftUI
+// MARK: LoginView SwiftUI
 struct LoginView : View {
     weak var presenter: LoginPresenterApi?
-    
+
     var body: some View {
         Text("Login SwiftUI View")
     }

@@ -8,14 +8,15 @@
 
 import Viperit
 
-//MARK: - LoginRouter API
+// MARK: - LoginRouter API
 protocol LoginRouterApi: RouterProtocol {
 }
 
-//MARK: - LoginPresenter API
+// MARK: - LoginPresenter API
 protocol LoginPresenterApi: PresenterProtocol {
+    func settings() -> UserSettings
 }
 
-//MARK: - LoginInteractor API
+// MARK: - LoginInteractor API
 protocol LoginInteractorApi: InteractorProtocol {
 }

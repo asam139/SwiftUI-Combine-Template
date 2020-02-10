@@ -11,10 +11,15 @@ import Viperit
 
 // MARK: - LoginPresenter Class
 final class LoginPresenter: Presenter {
+    let userSettings = UserSettings()
 }
 
 // MARK: - LoginPresenter API
 extension LoginPresenter: LoginPresenterApi {
+    func settings() -> UserSettings {
+        return userSettings
+    }
+
 }
 
 // MARK: - Login Viper Components

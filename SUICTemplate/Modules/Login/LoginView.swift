@@ -21,10 +21,11 @@ struct LoginView : View {
         ScrollView {
             VStack(spacing: 0) {
                 Image("Logo")
-                .resizable()
-                .renderingMode(.original)
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100, height: 100)
+                    .resizable()
+                    .renderingMode(.original)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: isScreenTall ? 75 : 50)
+                    .padding(.top, 10)
 
                 VStack(spacing: 0) {
                     HStack {
@@ -51,7 +52,7 @@ struct LoginView : View {
                             .frame(height: 72)
                     }
                 }
-                .background(Color.white)
+                .background(Color(UIColor.tertiarySystemFill))
                 .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                 .shadow(color: Color("buttonShadow2"), radius: 30, x: 0, y: 30)
                 .padding(.horizontal, 16)

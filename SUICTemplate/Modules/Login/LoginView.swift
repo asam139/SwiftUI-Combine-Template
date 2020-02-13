@@ -36,7 +36,7 @@ struct LoginView : View {
                             .background(Color("background"))
                             .cornerRadius(16)
                             .padding(12)
-                        TextField("Your email", text: $email)
+                        TextField(Localizable.Login.emailPlaceholder, text: $email)
                             .frame(height: 72)
                     }
                     Divider()
@@ -48,7 +48,7 @@ struct LoginView : View {
                             .background(Color("background"))
                             .cornerRadius(16)
                             .padding(12)
-                        TextField("Password", text: $password)
+                        TextField(Localizable.Login.passwordPlaceholder, text: $password)
                             .frame(height: 72)
                     }
                 }
@@ -62,7 +62,7 @@ struct LoginView : View {
                 .animation(Animation.easeOut(duration: 0.6))
 
                 HStack {
-                    Text("Forgot password?")
+                    Text(Localizable.Login.forgotPassword)
                         .font(.subheadline)
                         .underline()
                         .padding(.leading, 12)
@@ -82,6 +82,7 @@ struct LoginView : View {
                 .offset(y: show ? 0 : 20)
                 .animation(Animation.easeOut(duration: 0.6))
                 .padding(.bottom, 25)
+
                 VStack(spacing: 20) {
                     Image("Illustration6")
                         .resizable()
@@ -90,7 +91,7 @@ struct LoginView : View {
                         .opacity(show ? 1 : 0)
                         .offset(y: show ? 0 : 20)
                         .animation(Animation.easeOut(duration: 0.6).delay(0.1))
-                    Text("Learn design & code. From scratch.")
+                    Text(Localizable.Login.figureTitle)
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .lineLimit(2)
@@ -98,7 +99,7 @@ struct LoginView : View {
                         .opacity(show ? 1 : 0)
                         .offset(y: show ? 0 : 20)
                         .animation(Animation.easeOut(duration: 0.6).delay(0.3))
-                    Text("70 hours of video courses teaching SwiftUI, React and Design Tools. Login to access.")
+                    Text(Localizable.Login.figureSubtitle)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
                         .lineSpacing(10)
@@ -112,7 +113,7 @@ struct LoginView : View {
                         .animation(Animation.easeOut(duration: 0.6).delay(0.6))
                     }
                 }
-                .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 350, maxHeight: .infinity)
                 .padding(.horizontal, 10)
                 .padding(.vertical, isScreenTall ? 30 : 15)
                 .background(Color("background6"))
@@ -122,10 +123,17 @@ struct LoginView : View {
                         cornerRadius: show && isScreenTall ? 30 : 0,
                         style: .continuous
                     )
-
                 )
             }
-            //.edgesIgnoringSafeArea(.bottom)
+            .edgesIgnoringSafeArea(.bottom)
         }
     }
 }
+
+#if DEBUG
+struct Login_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView(presenter: nil, email: "mmm@mmm.com", password: "", show: true)
+    }
+}
+#endif

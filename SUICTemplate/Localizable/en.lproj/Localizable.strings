@@ -1,0 +1,30 @@
+
+/* Cancel */
+"CANCEL_KEY" = "Cancel";
+
+/* Done */
+"DONE_KEY" = "Done";
+
+/* Your email */
+"LOGIN_EMAIL_PLACEHOLDER_KEY" = "Type your email";
+
+/* Figure subtitle */
+"LOGIN_FIGURE_SUBTITLE_KEY" = "Design thinking for the success of 📱 apps.";
+
+/* Figure title */
+"LOGIN_FIGURE_TITLE_KEY" = "Learn 🦋 & 👨‍💻";
+
+/* Forgot password? */
+"LOGIN_FORGOT_PASSWORD_KEY" = "Forgot password?";
+
+/* Log in */
+"LOGIN_LOG_IN_KEY" = "Log in";
+
+/* Your password */
+"LOGIN_PASSWORD_PLACEHOLDER_KEY" = "Type your password";
+
+/* Ok */
+"OK_KEY" = "Ok";
+
+/* Skip */
+"SKIP_KEY" = "Skip";

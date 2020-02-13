@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
+		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
 		9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */; };
 		9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */; };
 		9C974B9523F1DBDE006AC63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9423F1DBDE006AC63A /* Assets.xcassets */; };
@@ -24,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C3E923323F5E10E009ADA6E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C3E923D23F5E500009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUICTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +59,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C3E923223F5E0FF009ADA6E /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				9C3E923323F5E10E009ADA6E /* Localizable.swift */,
+				9C3E923C23F5E4FC009ADA6E /* Localizable.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		9C974B8223F1DBDD006AC63A = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +87,7 @@
 		9C974B8D23F1DBDE006AC63A /* SUICTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				9C3E923223F5E0FF009ADA6E /* Localizable */,
 				9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */,
 				9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */,
 				9C974B9423F1DBDE006AC63A /* Assets.xcassets */,
@@ -133,6 +149,7 @@
 				9C974B8823F1DBDD006AC63A /* Frameworks */,
 				9C974B8923F1DBDD006AC63A /* Resources */,
 				9C974BB523F1DE87006AC63A /* Lint */,
+				9C3E923923F5E36B009ADA6E /* BartyCrouch */,
 			);
 			buildRules = (
 			);
@@ -168,6 +185,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 9C974B8223F1DBDD006AC63A;
 			packageReferences = (
@@ -188,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C974B9B23F1DBDE006AC63A /* LaunchScreen.storyboard in Resources */,
+				9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */,
 				9C974B9823F1DBDE006AC63A /* Preview Assets.xcassets in Resources */,
 				9C974B9523F1DBDE006AC63A /* Assets.xcassets in Resources */,
 			);
@@ -196,6 +215,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9C3E923923F5E36B009ADA6E /* BartyCrouch */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = BartyCrouch;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which mint >/dev/null; then\n    mint run Flinesoft/BartyCrouch bartycrouch update -x\n    mint run Flinesoft/BartyCrouch bartycrouch lint -x\nelse\n    echo \"warning: Mint not installed, download from https://github.com/yonaskolb/mint\"\nfi\n";
+		};
 		9C974BB523F1DE87006AC63A /* Lint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -230,6 +267,7 @@
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
 				9C974BB123F1DD68006AC63A /* AppModules.swift in Sources */,
 				9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */,
+				9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */,
 				9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,10 +275,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9C3E923C23F5E4FC009ADA6E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C3E923B23F5E4FC009ADA6E /* en */,
+				9C3E923D23F5E500009ADA6E /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		9C974B9923F1DBDE006AC63A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C974B9A23F1DBDE006AC63A /* Base */,
+				9C3E923523F5E2D3009ADA6E /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -252,6 +300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -312,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

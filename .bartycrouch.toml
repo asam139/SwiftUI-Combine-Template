@@ -1,0 +1,26 @@
+[update]
+tasks = ["interfaces", "code", "normalize"]
+
+[update.interfaces]
+path = "SUICTemplate"
+defaultToBase = false
+ignoreEmptyStrings = false
+unstripped = false
+
+[update.code]
+codePath = "SUICTemplate"
+localizablePath = "SUICTemplate"
+defaultToKeys = false
+additive = true
+unstripped = false
+
+[update.normalize]
+path = "SUICTemplate"
+sourceLocale = "en"
+harmonizeWithSource = true
+sortByKeys = true
+
+[lint]
+path = "SUICTemplate"
+duplicateKeys = true
+emptyValues = true

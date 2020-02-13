@@ -1,0 +1,30 @@
+
+/* Cancel */
+"CANCEL_KEY" = "Cancelar";
+
+/* Done */
+"DONE_KEY" = "Hecho";
+
+/* Your email */
+"LOGIN_EMAIL_PLACEHOLDER_KEY" = "Introduce tu email";
+
+/* Figure subtitle */
+"LOGIN_FIGURE_SUBTITLE_KEY" = "Diseña pensando el éxito de las aplicaciones 📱.";
+
+/* Figure title */
+"LOGIN_FIGURE_TITLE_KEY" = "Aprende 🦋 & 👨‍💻";
+
+/* Forgot password? */
+"LOGIN_FORGOT_PASSWORD_KEY" = "¿Olvidaste la contraseña?";
+
+/* Log in */
+"LOGIN_LOG_IN_KEY" = "Inicia sesión";
+
+/* Your password */
+"LOGIN_PASSWORD_PLACEHOLDER_KEY" = "Introduce tu contraseña";
+
+/* Ok */
+"OK_KEY" = "Ok";
+
+/* Skip */
+"SKIP_KEY" = "Saltar";

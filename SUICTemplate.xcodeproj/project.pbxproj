@@ -12,6 +12,7 @@
 		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
 		9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924123F70B66009ADA6E /* LoginLowerSubview.swift */; };
 		9C3E924423F70D14009ADA6E /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924323F70D14009ADA6E /* LoginTextField.swift */; };
+		9C3E924623F71255009ADA6E /* LoginAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924523F71255009ADA6E /* LoginAnimationModifier.swift */; };
 		9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */; };
 		9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */; };
 		9C974B9523F1DBDE006AC63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9423F1DBDE006AC63A /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUpperSubview.swift; sourceTree = "<group>"; };
 		9C3E924123F70B66009ADA6E /* LoginLowerSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLowerSubview.swift; sourceTree = "<group>"; };
 		9C3E924323F70D14009ADA6E /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
+		9C3E924523F71255009ADA6E /* LoginAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationModifier.swift; sourceTree = "<group>"; };
 		9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUICTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */,
 				9C3E924123F70B66009ADA6E /* LoginLowerSubview.swift */,
 				9C3E924323F70D14009ADA6E /* LoginTextField.swift */,
+				9C3E924523F71255009ADA6E /* LoginAnimationModifier.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
 				9C987FA823F332A5002E104D /* Constants.swift in Sources */,
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
+				9C3E924623F71255009ADA6E /* LoginAnimationModifier.swift in Sources */,
 				9C974BB123F1DD68006AC63A /* AppModules.swift in Sources */,
 				9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */,
 				9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */,

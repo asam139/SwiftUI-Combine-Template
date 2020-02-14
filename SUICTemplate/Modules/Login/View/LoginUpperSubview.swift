@@ -21,8 +21,7 @@ struct LoginUpperSubview : View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: isScreenTall ? 75 : 50)
                 .padding(.top, 10)
-                .opacity(isAnimating ? 1 : 0)
-                .offset(y: isAnimating ? 0 : 20)
+                .modifier(LoginAnimationModifier(animate: $isAnimating))
 
             VStack(spacing: 0) {
                 LoginTextField(imageSystemName: "person.crop.circle.fill",
@@ -38,9 +37,7 @@ struct LoginUpperSubview : View {
             .shadow(color: Color("buttonShadow2"), radius: 30, x: 0, y: 30)
             .padding(.horizontal, 16)
             .padding(.top, 30)
-            .opacity(isAnimating ? 1 : 0)
-            .offset(y: isAnimating ? 0 : 20)
-            .animation(Animation.easeOut(duration: 0.6), value: isAnimating)
+            .modifier(LoginAnimationModifier(animate: $isAnimating))
 
             HStack {
                 Text(Localizable.Login.forgotPassword)
@@ -57,9 +54,6 @@ struct LoginUpperSubview : View {
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             }
             .padding(16)
-            .opacity(isAnimating ? 1 : 0)
-            .offset(y: isAnimating ? 0 : 20)
-            .animation(Animation.easeOut(duration: 0.6), value: isAnimating)
             .padding(.bottom, 25)
         }
         .background(Color.white)

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
 		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
+		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
+		9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924123F70B66009ADA6E /* LoginLowerSubview.swift */; };
+		9C3E924423F70D14009ADA6E /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924323F70D14009ADA6E /* LoginTextField.swift */; };
 		9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */; };
 		9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */; };
 		9C974B9523F1DBDE006AC63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9423F1DBDE006AC63A /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9C3E923D23F5E500009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUpperSubview.swift; sourceTree = "<group>"; };
+		9C3E924123F70B66009ADA6E /* LoginLowerSubview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginLowerSubview.swift; sourceTree = "<group>"; };
+		9C3E924323F70D14009ADA6E /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUICTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,17 @@
 				9C3E923C23F5E4FC009ADA6E /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		9C3E923E23F70B2E009ADA6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C974BA923F1DD1D006AC63A /* LoginView.swift */,
+				9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */,
+				9C3E924123F70B66009ADA6E /* LoginLowerSubview.swift */,
+				9C3E924323F70D14009ADA6E /* LoginTextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9C974B8223F1DBDD006AC63A = {
@@ -117,7 +134,7 @@
 				9C974BA623F1DD1D006AC63A /* LoginRouter.swift */,
 				9C974BA723F1DD1D006AC63A /* LoginModuleApi.swift */,
 				9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */,
-				9C974BA923F1DD1D006AC63A /* LoginView.swift */,
+				9C3E923E23F70B2E009ADA6E /* View */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -262,6 +279,8 @@
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
 				9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */,
 				9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */,
+				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
+				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
 				9C987FA823F332A5002E104D /* Constants.swift in Sources */,
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
@@ -269,6 +288,7 @@
 				9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */,
 				9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */,
 				9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */,
+				9C3E924423F70D14009ADA6E /* LoginTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

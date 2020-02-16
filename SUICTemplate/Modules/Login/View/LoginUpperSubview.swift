@@ -15,7 +15,7 @@ struct LoginUpperSubview : View {
 
     var body: some View {
         VStack(spacing: 0) {
-            Image("Logo")
+            Image("logo")
                 .resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode: .fit)

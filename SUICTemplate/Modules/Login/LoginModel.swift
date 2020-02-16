@@ -19,16 +19,25 @@ class LoginModel : ObservableObject {
 
     private var cancellableSet: Set<AnyCancellable> = []
 
-    private var isEmailValidPublisher: AnyPublisher<String?, Never> {
+    var isEmailValidPublisher: AnyPublisher<String?, Never> {
         return $email
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { input in
-                print("Email: \(input)")
-                guard !input.isEmpty else { return nil }
-                return input
+                // Simulate request
+                return Future { promise in
+                    print("Email: \(input)")
+                    let isValid = LoginModel.isEmailValid(input)
+                    promise(.success(isValid ? input : nil))
+                }
         }
+        .switchToLatest()
         .eraseToAnyPublisher()
+    }
+
+    private static func isEmailValid(_ text: String) -> Bool {
+        return NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
+                .evaluate(with: text)
     }
 
     private var isPasswordValidPublisher: AnyPublisher<String?, Never> {
@@ -37,7 +46,6 @@ class LoginModel : ObservableObject {
             .map { input in
                 print("Password: \(input)")
                 guard !input.isEmpty else { return nil }
-                print("valid")
                 return input
         }
         .eraseToAnyPublisher()

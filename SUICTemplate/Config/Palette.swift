@@ -10,28 +10,17 @@ import Foundation
 import SwiftUI
 
 enum Palette {
-    static let primary = Color("themePrimary")
-    static let light = Color("themeLight")
-    static let label = Color("themeLabel")
-    static let secondaryLabel = Color("themeSecondaryLabel")
-    static let affirmation = Color("themeAffirmation")
-    static let negation = Color("themeNegation")
-    static let white = Color("themeWhite")
-    static let black = Color("themeBlack")
-
-
-
-    private static let defaultLabel: UIColor = {
-        if #available(iOS 13, *) {
-            return UIColor.label
-        }
-        return UIColor.darkText
-    }()
-
-    private static let defaultSecondaryLabel: UIColor = {
-        if #available(iOS 13, *) {
-            return UIColor.secondaryLabel
-        }
-        return UIColor.lightText
-    }()
+    static let primary = Color("primary")
+    static let primaryDark = Color("primaryDark")
+    static let primaryLight = Color("primaryLight")
+    static let secondary = Color("secondary")
+    static let secondaryDark = Color("secondaryDark")
+    static let secondaryLight = Color("secondaryLight")
+    static let surface = Color("surface")
+    static let surfaceDark = Color("surfaceDark")
+    static let surfaceLight = Color("surfaceLight")
+    static let label = Color("label")
+    static let secondaryLabel = Color("secondaryLabel")
+    static let shadow = Color("shadow")
+    static let secondaryShadow = Color("secondaryShadow")
 }

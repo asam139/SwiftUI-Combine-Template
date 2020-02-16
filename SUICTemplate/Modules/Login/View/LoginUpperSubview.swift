@@ -34,7 +34,7 @@ struct LoginUpperSubview : View {
             }
             .background(Color(UIColor.tertiarySystemFill))
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-            .shadow(color: Color("buttonShadow2"), radius: 30, x: 0, y: 30)
+            .shadow(color: Palette.shadow, radius: 30, x: 5, y: 5)
             .padding(.horizontal, 16)
             .padding(.top, 30)
             .modifier(LoginAnimationModifier(animate: $isAnimating))
@@ -50,7 +50,7 @@ struct LoginUpperSubview : View {
                 }
                 .padding(.horizontal, 36)
                 .padding(.vertical, 12)
-                .background(Color("background3"))
+                .background(Palette.primaryDark)
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             }
             .padding(16)

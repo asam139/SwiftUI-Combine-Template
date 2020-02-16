@@ -37,7 +37,6 @@ struct LoginLowerSubview : View {
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 350, maxHeight: .infinity)
         .padding(.horizontal, 10)
         .padding(.vertical, isScreenTall ? 30 : 15)
-        .background(Color("background6"))
         .clipShape(
             RoundedRectangle(
                 cornerRadius: isAnimating && isScreenTall ? 30 : 0,

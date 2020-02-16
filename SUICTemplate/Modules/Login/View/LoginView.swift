@@ -30,7 +30,7 @@ struct LoginView : View {
                 self.show = true
             }
         }
-        .background(Color("background6"))
+        .background(Palette.primary)
         .edgesIgnoringSafeArea(.all)
     }
 }

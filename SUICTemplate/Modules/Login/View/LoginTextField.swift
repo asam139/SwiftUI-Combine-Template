@@ -17,9 +17,9 @@ struct LoginTextField: View {
         HStack {
             Image(systemName: imageSystemName)
                 .frame(width: 16, height: 16)
-                .foregroundColor(Color("loginicon"))
+                .foregroundColor(Palette.surfaceDark)
                 .padding(.all)
-                .background(Color("background"))
+                .background(Palette.surface)
                 .cornerRadius(16)
                 .padding(12)
             TextField(placeholder, text: $text)

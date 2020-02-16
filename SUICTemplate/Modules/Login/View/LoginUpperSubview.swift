@@ -9,8 +9,7 @@
 import SwiftUI
 
 struct LoginUpperSubview : View {
-    @Binding var email: String
-    @Binding var password: String
+    @ObservedObject var model: LoginModel
     @Binding var isAnimating: Bool
 
     var body: some View {
@@ -26,11 +25,11 @@ struct LoginUpperSubview : View {
             VStack(spacing: 0) {
                 LoginTextField(imageSystemName: "person.crop.circle.fill",
                                placeholder: Localizable.Login.emailPlaceholder,
-                               text: $email)
+                               text: $model.email)
                 Divider()
                 LoginTextField(imageSystemName: "lock.fill",
                                placeholder: Localizable.Login.passwordPlaceholder,
-                               text: $password)
+                               text: $model.password)
             }
             .background(Palette.surface)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
@@ -45,13 +44,14 @@ struct LoginUpperSubview : View {
                     .underline()
                     .padding(.leading, 12)
                 Spacer()
-                Button(action: {}) {
+                Button(action: { print("Logged in")}) {
                     Text("Log in").foregroundColor(.white)
                 }
                 .padding(.horizontal, 36)
                 .padding(.vertical, 12)
                 .background(Palette.primaryDark)
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .disabled(!model.isValid)
             }
             .padding(16)
             .padding(.bottom, 25)
@@ -70,7 +70,7 @@ struct LoginUpperSubview : View {
 #if DEBUG
 struct LoginUpperView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginUpperSubview(email: .constant("test@test.com"), password: .constant("12345678"), isAnimating: .constant(true))
+        LoginUpperSubview(model: LoginModel(), isAnimating: .constant(true))
     }
 }
 #endif

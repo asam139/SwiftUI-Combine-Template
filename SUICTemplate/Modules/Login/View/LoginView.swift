@@ -13,15 +13,14 @@ import Viperit
 struct LoginView : View {
     weak var presenter: LoginPresenterApi?
 
-    @State var email: String = ""
-    @State var password: String = ""
+    @ObservedObject var loginModel: LoginModel = LoginModel()
     @State var show: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
                 VStack(spacing: 0) {
-                    LoginUpperSubview(email: self.$email, password: self.$password, isAnimating: self.$show)
+                    LoginUpperSubview(model: self.loginModel, isAnimating: self.$show)
                     Spacer()
                     LoginLowerSubview(isAnimating: self.$show)
                 }.padding(geometry.safeAreaInsets)
@@ -38,7 +37,7 @@ struct LoginView : View {
 #if DEBUG
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(presenter: nil, email: "mmm@mmm.com", password: "", show: true)
+        LoginView(presenter: nil, show: true)
     }
 }
 #endif

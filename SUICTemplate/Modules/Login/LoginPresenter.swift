@@ -8,6 +8,7 @@
 
 import Foundation
 import Viperit
+import Combine
 
 // MARK: - LoginPresenter Class
 final class LoginPresenter: Presenter {

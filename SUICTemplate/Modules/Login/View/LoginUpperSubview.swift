@@ -32,7 +32,7 @@ struct LoginUpperSubview : View {
                                placeholder: Localizable.Login.passwordPlaceholder,
                                text: $password)
             }
-            .background(Color(UIColor.tertiarySystemFill))
+            .background(Palette.surface)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             .shadow(color: Palette.shadow, radius: 30, x: 5, y: 5)
             .padding(.horizontal, 16)
@@ -56,7 +56,7 @@ struct LoginUpperSubview : View {
             .padding(16)
             .padding(.bottom, 25)
         }
-        .background(Color.white)
+        .background(Palette.surface)
         .opacity(isAnimating ? 1 : 0)
         .clipShape(
             RoundedRectangle(

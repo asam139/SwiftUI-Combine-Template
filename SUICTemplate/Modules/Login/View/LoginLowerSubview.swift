@@ -30,9 +30,13 @@ struct LoginLowerSubview : View {
                 .lineSpacing(10)
                 .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.3))
             Button(action: { self.isAnimating.toggle() }) {
-                Text("Skip").foregroundColor(.white)
+                Text(Localizable.Common.skip).foregroundColor(Palette.primary)
                 .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.5))
             }
+            .padding(.horizontal, 36)
+            .padding(.vertical, 12)
+            .background(Palette.surface)
+            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 350, maxHeight: .infinity)
         .padding(.horizontal, 10)

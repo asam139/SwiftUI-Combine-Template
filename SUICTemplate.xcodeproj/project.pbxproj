@@ -14,6 +14,13 @@
 		9C3E924423F70D14009ADA6E /* LoginTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924323F70D14009ADA6E /* LoginTextField.swift */; };
 		9C3E924623F71255009ADA6E /* LoginAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924523F71255009ADA6E /* LoginAnimationModifier.swift */; };
 		9C3E924923F7171A009ADA6E /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E924823F7171A009ADA6E /* Palette.swift */; };
+		9C628CDB23FB16A4005F8F06 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9C628CDA23FB16A4005F8F06 /* Alamofire */; };
+		9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CDD23FB178A005F8F06 /* StoragePropertyWrapper.swift */; };
+		9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE023FB1851005F8F06 /* APIPaginator.swift */; };
+		9C628CE523FB1851005F8F06 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE123FB1851005F8F06 /* APIClient.swift */; };
+		9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE223FB1851005F8F06 /* APIRouter.swift */; };
+		9C628CE723FB1851005F8F06 /* AccessTokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */; };
+		9C628CE923FB1A44005F8F06 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE823FB1A44005F8F06 /* Pagination.swift */; };
 		9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */; };
 		9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */; };
 		9C974B9523F1DBDE006AC63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9423F1DBDE006AC63A /* Assets.xcassets */; };
@@ -41,6 +48,12 @@
 		9C3E924323F70D14009ADA6E /* LoginTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextField.swift; sourceTree = "<group>"; };
 		9C3E924523F71255009ADA6E /* LoginAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationModifier.swift; sourceTree = "<group>"; };
 		9C3E924823F7171A009ADA6E /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		9C628CDD23FB178A005F8F06 /* StoragePropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoragePropertyWrapper.swift; sourceTree = "<group>"; };
+		9C628CE023FB1851005F8F06 /* APIPaginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPaginator.swift; sourceTree = "<group>"; };
+		9C628CE123FB1851005F8F06 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9C628CE223FB1851005F8F06 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenInterceptor.swift; sourceTree = "<group>"; };
+		9C628CE823FB1A44005F8F06 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUICTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +78,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C974BA423F1DCCF006AC63A /* Viperit in Frameworks */,
+				9C628CDB23FB16A4005F8F06 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +115,25 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		9C628CDC23FB1771005F8F06 /* PropertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				9C628CDD23FB178A005F8F06 /* StoragePropertyWrapper.swift */,
+			);
+			path = PropertyWrapper;
+			sourceTree = "<group>";
+		};
+		9C628CDF23FB1839005F8F06 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				9C628CE223FB1851005F8F06 /* APIRouter.swift */,
+				9C628CE123FB1851005F8F06 /* APIClient.swift */,
+				9C628CE023FB1851005F8F06 /* APIPaginator.swift */,
+				9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		9C974B8223F1DBDD006AC63A = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +161,10 @@
 				9C974B9923F1DBDE006AC63A /* LaunchScreen.storyboard */,
 				9C974B9C23F1DBDE006AC63A /* Info.plist */,
 				9C974BB023F1DD68006AC63A /* AppModules.swift */,
+				9C628CDF23FB1839005F8F06 /* Api */,
 				9C974BB623F1E79A006AC63A /* Models */,
 				9C974BB723F1E7A8006AC63A /* Modules */,
+				9C628CDC23FB1771005F8F06 /* PropertyWrapper */,
 				9C974B9623F1DBDE006AC63A /* Preview Content */,
 			);
 			path = SUICTemplate;
@@ -160,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				9C974BB923F1E7BF006AC63A /* UserSettings.swift */,
+				9C628CE823FB1A44005F8F06 /* Pagination.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +236,7 @@
 			name = SUICTemplate;
 			packageProductDependencies = (
 				9C974BA323F1DCCF006AC63A /* Viperit */,
+				9C628CDA23FB16A4005F8F06 /* Alamofire */,
 			);
 			productName = "SwiftUI-Combine-Template";
 			productReference = 9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */;
@@ -232,6 +269,7 @@
 			mainGroup = 9C974B8223F1DBDD006AC63A;
 			packageReferences = (
 				9C974BA223F1DCCF006AC63A /* XCRemoteSwiftPackageReference "Viperit" */,
+				9C628CD923FB16A4005F8F06 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 9C974B8C23F1DBDE006AC63A /* Products */;
 			projectDirPath = "";
@@ -300,10 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */,
 				9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
+				9C628CE523FB1851005F8F06 /* APIClient.swift in Sources */,
+				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */,
 				9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */,
+				9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */,
 				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
 				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
@@ -311,12 +353,14 @@
 				B401CEC723F9BBA400CD6356 /* LoginModel.swift in Sources */,
 				9C987FA823F332A5002E104D /* Constants.swift in Sources */,
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
+				9C628CE923FB1A44005F8F06 /* Pagination.swift in Sources */,
 				9C3E924623F71255009ADA6E /* LoginAnimationModifier.swift in Sources */,
 				9C974BB123F1DD68006AC63A /* AppModules.swift in Sources */,
 				9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */,
 				9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */,
 				9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */,
 				9C3E924423F70D14009ADA6E /* LoginTextField.swift in Sources */,
+				9C628CE723FB1851005F8F06 /* AccessTokenInterceptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +568,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9C628CD923FB16A4005F8F06 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		9C974BA223F1DCCF006AC63A /* XCRemoteSwiftPackageReference "Viperit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ferranabello/Viperit.git";
@@ -535,6 +587,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9C628CDA23FB16A4005F8F06 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9C628CD923FB16A4005F8F06 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		9C974BA323F1DCCF006AC63A /* Viperit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9C974BA223F1DCCF006AC63A /* XCRemoteSwiftPackageReference "Viperit" */;

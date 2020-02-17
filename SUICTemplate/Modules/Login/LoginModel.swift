@@ -26,7 +26,6 @@ class LoginModel : ObservableObject {
             .map { input in
                 // Simulate request
                 return Future { promise in
-                    print("Email: \(input)")
                     let isValid = LoginModel.isEmailValid(input)
                     promise(.success(isValid ? input : nil))
                 }
@@ -44,7 +43,6 @@ class LoginModel : ObservableObject {
         return $password
             .debounce(for: 0.5, scheduler: RunLoop.main)
             .map { input in
-                print("Password: \(input)")
                 guard !input.isEmpty else { return nil }
                 return input
         }
@@ -54,7 +52,6 @@ class LoginModel : ObservableObject {
     private var isValidPublisher: AnyPublisher<Bool, Never> {
       Publishers.CombineLatest(isEmailValidPublisher, isPasswordValidPublisher)
         .map { email, password in
-            print(email != nil && password != nil)
             return email != nil && password != nil
         }
       .eraseToAnyPublisher()

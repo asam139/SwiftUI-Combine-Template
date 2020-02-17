@@ -29,7 +29,6 @@
 		9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */; };
 		9C987FA823F332A5002E104D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C987FA723F332A5002E104D /* Constants.swift */; };
 		B401CEC723F9BBA400CD6356 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B401CEC623F9BBA400CD6356 /* LoginModel.swift */; };
-		B401CEC923F9BC1600CD6356 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B401CEC823F9BC1600CD6356 /* SignUpModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +57,6 @@
 		9C974BB923F1E7BF006AC63A /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		9C987FA723F332A5002E104D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B401CEC623F9BBA400CD6356 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
-		B401CEC823F9BC1600CD6356 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +176,6 @@
 		B401CECA23F9BF6200CD6356 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				B401CEC823F9BC1600CD6356 /* SignUpModel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 				9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
 				9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */,
-				B401CEC923F9BC1600CD6356 /* SignUpModel.swift in Sources */,
 				9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */,
 				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
 				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,

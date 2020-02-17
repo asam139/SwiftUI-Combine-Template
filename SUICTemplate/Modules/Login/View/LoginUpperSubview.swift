@@ -44,13 +44,14 @@ struct LoginUpperSubview : View {
                     .underline()
                     .padding(.leading, 12)
                 Spacer()
-                Button(action: { print("Logged in")}) {
-                    Text("Log in").foregroundColor(.white)
+                Button(action: { print("Logged in") }) {
+                    Text("Log in")
                 }
                 .padding(.horizontal, 36)
                 .padding(.vertical, 12)
                 .background(Palette.primaryDark)
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .accentColor(model.isValid ? Palette.white : Palette.gray)
                 .disabled(!model.isValid)
             }
             .padding(16)

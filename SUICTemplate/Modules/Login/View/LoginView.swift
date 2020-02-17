@@ -25,7 +25,6 @@ struct LoginView : View {
                     LoginLowerSubview(isAnimating: self.$show)
                 }.padding(geometry.safeAreaInsets)
             }.onAppear {
-                print("On appear")
                 self.show = true
             }
         }

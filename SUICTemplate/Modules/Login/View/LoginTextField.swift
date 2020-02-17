@@ -24,6 +24,7 @@ struct LoginTextField: View {
                 .padding(12)
             TextField(placeholder, text: $text)
                 .frame(height: 72)
+                .autocapitalization(.none)
         }
     }
 }

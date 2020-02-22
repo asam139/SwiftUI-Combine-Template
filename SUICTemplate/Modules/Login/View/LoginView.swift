@@ -20,7 +20,7 @@ struct LoginView : View {
         GeometryReader { geometry in
             ScrollView {
                 VStack(spacing: 0) {
-                    LoginUpperSubview(model: self.loginModel, isAnimating: self.$show)
+                    LoginUpperSubview(model: self.loginModel, isAnimating: self.$show, onLogin: self.onLogin)
                     Spacer()
                     LoginLowerSubview(isAnimating: self.$show)
                 }.padding(geometry.safeAreaInsets)
@@ -30,6 +30,12 @@ struct LoginView : View {
         }
         .background(Palette.primary)
         .edgesIgnoringSafeArea(.all)
+    }
+
+    func onLogin() {
+        let email = loginModel.email
+        let password = loginModel.password
+        presenter?.onLogin(email: email, password: password)
     }
 }
 

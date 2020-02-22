@@ -67,7 +67,7 @@ class APIClient {
     }
 
     func performRequest(
-        route: APIRouter) -> Future<Any, Error> {
+        route: APIRouter) -> Future<Any, AFError> {
         return Future { [weak self] promise in
             self?.session
                 .request(route)

@@ -12,6 +12,8 @@ struct LoginUpperSubview : View {
     @ObservedObject var model: LoginModel
     @Binding var isAnimating: Bool
 
+    var onLogin: () -> Void
+
     var body: some View {
         VStack(spacing: 0) {
             Image("logo")
@@ -44,8 +46,8 @@ struct LoginUpperSubview : View {
                     .underline()
                     .padding(.leading, 12)
                 Spacer()
-                Button(action: { print("Logged in") }) {
-                    Text("Log in")
+                Button(action: onLogin) {
+                    Text(Localizable.Login.logIn)
                 }
                 .padding(.horizontal, 36)
                 .padding(.vertical, 12)
@@ -71,7 +73,9 @@ struct LoginUpperSubview : View {
 #if DEBUG
 struct LoginUpperView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginUpperSubview(model: LoginModel(), isAnimating: .constant(true))
+        LoginUpperSubview(model: LoginModel(), isAnimating: .constant(true), onLogin: {
+            print("Login")
+        })
     }
 }
 #endif

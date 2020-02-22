@@ -12,15 +12,23 @@ import Combine
 
 // MARK: - LoginPresenter Class
 final class LoginPresenter: Presenter {
-    let userSettings = UserSettings()
+    let settings = UserSettings()
 }
 
 // MARK: - LoginPresenter API
 extension LoginPresenter: LoginPresenterApi {
-    func settings() -> UserSettings {
-        return userSettings
+
+    func onLogin(email: String, password: String) {
+
     }
 
+    func loginSuccessful(userToken: UserToken) {
+        print(userToken)
+    }
+
+    func loginFailed() {
+
+    }
 }
 
 // MARK: - Login Viper Components

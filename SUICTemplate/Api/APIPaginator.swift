@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 import Combine
 
-
 class APIPaginator<T: Decodable> {
     private var apiClient: APIClient
     private var disposables = Set<AnyCancellable>()

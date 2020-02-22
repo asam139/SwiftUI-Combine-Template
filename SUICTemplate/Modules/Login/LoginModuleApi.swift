@@ -15,9 +15,17 @@ protocol LoginRouterApi: RouterProtocol {
 
 // MARK: - LoginPresenter API
 protocol LoginPresenterApi: PresenterProtocol {
-    func settings() -> UserSettings
+    var settings: UserSettings { get }
+
+    func onLogin(email: String, password: String)
+
+    func loginSuccessful(userToken: UserToken)
+    func loginFailed()
 }
 
 // MARK: - LoginInteractor API
 protocol LoginInteractorApi: InteractorProtocol {
+    var apiClient: APIClient! { get set }
+
+    func requestLogin(email: String, password: String)
 }

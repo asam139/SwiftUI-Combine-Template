@@ -33,9 +33,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func showLoginModule() {
         let module = AppModules.login.build { (presenter) -> (LoginView, UserSettings) in
             let p = presenter as! LoginPresenterApi
-            let settings = p.settings()
+
+            let settings = p.settings
             return (LoginView(presenter: p), settings)
         }
+        let interactor = module.interactor as? LoginInteractor
+        interactor?.apiClient = APIClient()
 
         let router = module.router as! LoginRouter
         router.show(inWindow: self.window)

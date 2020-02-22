@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 enum APIRouter: URLRequestConvertible {
-    case login(email: String, password: String?)
+    case login(email: String, password: String)
 
     static let baseURLString = K.ProductionServer.apiBaseURL
 
@@ -66,4 +66,3 @@ enum APIRouter: URLRequestConvertible {
         return multipartFormData
     }
 }
-

@@ -15,17 +15,7 @@ struct AppData {
     static var isDoneOldApiMigration: Bool
 }
 
-// MARK: API
-struct K {
-    struct ProductionServer {
-        static let apiBaseURL = "http://localhost:8080/"
-    }
-
-    struct APIParameterKey {
-        static let password = "password"
-        static let email = "email"
-    }
-}
+// MARK: HTTP Headers
 
 enum HTTPHeaderField: String {
     case authentication = "Authorization"

@@ -33,9 +33,10 @@
 		9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA923F1DD1D006AC63A /* LoginView.swift */; };
 		9C974BB123F1DD68006AC63A /* AppModules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BB023F1DD68006AC63A /* AppModules.swift */; };
 		9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BB923F1E7BF006AC63A /* UserSettings.swift */; };
-		9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */; };
 		9C987FA823F332A5002E104D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C987FA723F332A5002E104D /* Constants.swift */; };
 		9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE74C1B240165D0001D9369 /* UserToken.swift */; };
+		9CE74C21240192E5001D9369 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE74C20240192E5001D9369 /* Environment.swift */; };
+		9CE74C22240195B7001D9369 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */; };
 		B401CEC723F9BBA400CD6356 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B401CEC623F9BBA400CD6356 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,9 @@
 		9C974BB923F1E7BF006AC63A /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		9C987FA723F332A5002E104D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9CE74C1B240165D0001D9369 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
+		9CE74C1E2401900E001D9369 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		9CE74C1F24019018001D9369 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		9CE74C20240192E5001D9369 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		B401CEC623F9BBA400CD6356 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,13 +112,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		9C3E924723F716EC009ADA6E /* Config */ = {
+		9C3E924723F716EC009ADA6E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				9C987FA723F332A5002E104D /* Constants.swift */,
 				9C3E924823F7171A009ADA6E /* Palette.swift */,
+				9CE74C20240192E5001D9369 /* Environment.swift */,
 			);
-			path = Config;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9C628CDC23FB1771005F8F06 /* PropertyWrapper */ = {
@@ -155,7 +160,8 @@
 		9C974B8D23F1DBDE006AC63A /* SUICTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				9C3E924723F716EC009ADA6E /* Config */,
+				9CE74C1D24018FFB001D9369 /* Configs */,
+				9C3E924723F716EC009ADA6E /* Utils */,
 				9C3E923223F5E0FF009ADA6E /* Localizable */,
 				9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */,
 				9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */,
@@ -210,6 +216,15 @@
 				B401CECA23F9BF6200CD6356 /* SignUp */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		9CE74C1D24018FFB001D9369 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				9CE74C1E2401900E001D9369 /* Release.xcconfig */,
+				9CE74C1F24019018001D9369 /* Development.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		B401CECA23F9BF6200CD6356 /* SignUp */ = {
@@ -344,6 +359,7 @@
 				9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */,
 				9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
+				9CE74C22240195B7001D9369 /* LoginInteractor.swift in Sources */,
 				9C628CE523FB1851005F8F06 /* APIClient.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */,
@@ -359,10 +375,10 @@
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
 				9C628CE923FB1A44005F8F06 /* Pagination.swift in Sources */,
 				9C3E924623F71255009ADA6E /* LoginAnimationModifier.swift in Sources */,
+				9CE74C21240192E5001D9369 /* Environment.swift in Sources */,
 				9C974BB123F1DD68006AC63A /* AppModules.swift in Sources */,
 				9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */,
 				9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */,
-				9C974BBB23F1EB65006AC63A /* LoginInteractor.swift in Sources */,
 				9C3E924423F70D14009ADA6E /* LoginTextField.swift in Sources */,
 				9C628CE723FB1851005F8F06 /* AccessTokenInterceptor.swift in Sources */,
 			);
@@ -392,8 +408,9 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9C974B9D23F1DBDE006AC63A /* Debug */ = {
+		9C974B9D23F1DBDE006AC63A /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE74C1F24019018001D9369 /* Development.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -451,10 +468,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = Development;
 		};
 		9C974B9E23F1DBDE006AC63A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE74C1E2401900E001D9369 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -508,8 +526,9 @@
 			};
 			name = Release;
 		};
-		9C974BA023F1DBDE006AC63A /* Debug */ = {
+		9C974BA023F1DBDE006AC63A /* Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE74C1F24019018001D9369 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,10 +545,11 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = Development;
 		};
 		9C974BA123F1DBDE006AC63A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CE74C1E2401900E001D9369 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -554,7 +574,7 @@
 		9C974B8623F1DBDD006AC63A /* Build configuration list for PBXProject "SUICTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C974B9D23F1DBDE006AC63A /* Debug */,
+				9C974B9D23F1DBDE006AC63A /* Development */,
 				9C974B9E23F1DBDE006AC63A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -563,7 +583,7 @@
 		9C974B9F23F1DBDE006AC63A /* Build configuration list for PBXNativeTarget "SUICTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C974BA023F1DBDE006AC63A /* Debug */,
+				9C974BA023F1DBDE006AC63A /* Development */,
 				9C974BA123F1DBDE006AC63A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;

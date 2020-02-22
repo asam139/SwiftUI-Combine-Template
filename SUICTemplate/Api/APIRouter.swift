@@ -12,7 +12,7 @@ import Alamofire
 enum APIRouter: URLRequestConvertible {
     case login(email: String, password: String)
 
-    static let baseURLString = K.ProductionServer.apiBaseURL
+    static let baseURLString = Environment.rootURL
 
     var method: HTTPMethod {
         switch self {

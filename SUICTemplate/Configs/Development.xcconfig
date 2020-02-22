@@ -1,0 +1,17 @@
+//
+//  Development.xcconfig
+//  SUICTemplate
+//
+//  Created by Saul Moreno Abril on 22/02/2020.
+//  Copyright © 2020 Saul Moreno Abril. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Server URL
+ROOT_URL = http:/$()/localhost:8080
+
+// App Settings
+APP_NAME = SUIC Development
+APP_BUNDLE_ID = com.saulmorenoabril.SwiftUI-Combine-Template.development

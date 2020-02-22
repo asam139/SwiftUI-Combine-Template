@@ -21,12 +21,16 @@ final class LoginInteractor: Interactor {
 // MARK: - LoginInteractor API
 extension LoginInteractor: LoginInteractorApi {
     func requestLogin(email: String, password: String) {
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+
+        let route = APIRouter.login(email: email, password: password)
         let publisher: AnyPublisher<UserToken, AFError> =
-            apiClient.performRequestDecodable(route: APIRouter.login(email: email, password: password))
+            apiClient.performRequestDecodable(route: route, decoder: decoder)
         publisher.sink(receiveCompletion: { [weak self] value in
             switch value {
-            case .failure:
-                self?.presenter.loginFailed()
+            case .failure(let error):
+                self?.presenter.loginFailed(error: error)
 
             case .finished: break
             }

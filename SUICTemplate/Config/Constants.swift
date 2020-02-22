@@ -18,7 +18,7 @@ struct AppData {
 // MARK: API
 struct K {
     struct ProductionServer {
-        static let apiBaseURL = "https://localhost:3000/"
+        static let apiBaseURL = "http://localhost:8080/"
     }
 
     struct APIParameterKey {

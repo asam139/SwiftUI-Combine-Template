@@ -13,14 +13,14 @@ import Viperit
 struct LoginView : View {
     weak var presenter: LoginPresenterApi?
 
-    @ObservedObject var loginModel: LoginModel = LoginModel()
+    @EnvironmentObject var loginModel: LoginModel
     @State var show: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
                 VStack(spacing: 0) {
-                    LoginUpperSubview(model: self.loginModel, isAnimating: self.$show, onLogin: self.onLogin)
+                    LoginUpperSubview(model: self.loginModel,  isAnimating: self.$show, onLogin: self.onLogin)
                     Spacer()
                     LoginLowerSubview(isAnimating: self.$show)
                 }.padding(geometry.safeAreaInsets)
@@ -35,6 +35,7 @@ struct LoginView : View {
     func onLogin() {
         let email = loginModel.email
         let password = loginModel.password
+        print(email, password)
         presenter?.onLogin(email: email, password: password)
     }
 }

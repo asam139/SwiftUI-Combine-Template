@@ -29,14 +29,7 @@ enum APIRouter: URLRequestConvertible {
     }
 
     var body: Parameters {
-        var body: Parameters = [:]
-        switch self {
-        case .login(let email, let password):
-            body["email"] = email
-            body["password"] = password
-        }
-
-        return body
+        return [:]
     }
 
     // MARK: URLRequestConvertible
@@ -48,6 +41,16 @@ enum APIRouter: URLRequestConvertible {
 
         // Common Headers
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
+
+        // Specific Headers
+        switch self {
+        case .login(let email, let password):
+            let loginString = String(format: "%@:%@", email, password)
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString = loginData.base64EncodedString()
+            let basicValue = "Basic \(base64LoginString)"
+            urlRequest.setValue(basicValue, forHTTPHeaderField: HTTPHeaderField.authentication.rawValue)
+        }
 
         // Encode body
         //urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)

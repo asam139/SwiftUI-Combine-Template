@@ -10,8 +10,10 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // Server URL
-ROOT_URL = https:/$()/www.suictemplate.com
+API_URL = https:/$()/www.suictemplate.com
 
 // App Settings
 APP_NAME = SUIC
 APP_BUNDLE_ID = com.saulmorenoabril.SwiftUI-Combine-Template
+
+APP_ALLOWS_ARBITRARY_LOADS = NO

@@ -11,7 +11,7 @@ import Foundation
 public enum Environment {
     // MARK: - Keys
     enum Keys: String {
-        case rootURL = "ROOT_URL"
+        case apiURL = "API_URL"
     }
 
     // MARK: - Plist
@@ -23,8 +23,8 @@ public enum Environment {
     }()
 
     // MARK: - Plist values
-    static let rootURL: URL = {
-        guard let rootURLstring = Environment.infoDictionary[Environment.Keys.rootURL.rawValue] as? String else {
+    static let apiURL: URL = {
+        guard let rootURLstring = Environment.infoDictionary[Environment.Keys.apiURL.rawValue] as? String else {
           fatalError("Root URL not set in plist for this environment")
         }
         guard let url = URL(string: rootURLstring) else {

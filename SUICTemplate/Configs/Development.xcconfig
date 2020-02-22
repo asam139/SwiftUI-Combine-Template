@@ -10,7 +10,7 @@
 // https://help.apple.com/xcode/#/dev745c5c974
 
 // Server URL
-ROOT_URL = http:/$()/localhost:8080
+API_URL = http:/$()/localhost:8080
 
 // App Settings
 APP_NAME = SUIC Development

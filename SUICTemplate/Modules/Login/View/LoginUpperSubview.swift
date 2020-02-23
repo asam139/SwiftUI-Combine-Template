@@ -28,10 +28,12 @@ struct LoginUpperSubview : View {
                 LoginTextField(imageSystemName: "person.crop.circle.fill",
                                placeholder: Localizable.Login.emailPlaceholder,
                                text: $model.email)
+                    .disabled(model.loading)
                 Divider()
                 LoginTextField(imageSystemName: "lock.fill",
                                placeholder: Localizable.Login.passwordPlaceholder,
                                text: $model.password)
+                    .disabled(model.loading)
             }
             .background(Palette.surface)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
@@ -53,8 +55,8 @@ struct LoginUpperSubview : View {
                 .padding(.vertical, 12)
                 .background(Palette.primaryDark)
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                .accentColor(model.isValid ? Palette.white : Palette.gray)
-                .disabled(!model.isValid)
+                .accentColor(canLogin ? Palette.white : Palette.gray)
+                .disabled(!canLogin)
             }
             .padding(16)
             .padding(.bottom, 25)
@@ -67,6 +69,10 @@ struct LoginUpperSubview : View {
                 style: .continuous
             )
         ).animation(Animation.spring())
+    }
+
+    var canLogin: Bool {
+        return model.isValid && !model.loading
     }
 }
 

@@ -16,4 +16,5 @@ class LoginModel : ObservableObject {
 
     // Output
     @Published var isValid: Bool = false
+    @Published var loading: Bool = false
 }

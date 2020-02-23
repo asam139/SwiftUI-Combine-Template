@@ -30,14 +30,17 @@ final class LoginPresenter: Presenter {
 extension LoginPresenter: LoginPresenterApi {
 
     func onLogin(email: String, password: String) {
+        loginModel.loading = true
         interactor.requestLogin(email: email, password: password)
     }
 
     func loginSuccessful(userToken: UserToken) {
+        loginModel.loading = false
         print(userToken)
     }
 
     func loginFailed(error: Error) {
+        loginModel.loading = false
         print(error)
     }
 }

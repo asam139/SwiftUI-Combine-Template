@@ -21,6 +21,13 @@
 		9C628CE723FB1851005F8F06 /* AccessTokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */; };
 		9C628CE923FB1A44005F8F06 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE823FB1A44005F8F06 /* Pagination.swift */; };
 		9C81AD702407CE560010FCF5 /* Color+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD6F2407CE560010FCF5 /* Color+Palette.swift */; };
+		9C81AD722407CEE60010FCF5 /* LinearGradient+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD712407CEE60010FCF5 /* LinearGradient+Extensions.swift */; };
+		9C81AD752407CFBD0010FCF5 /* DarkBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD742407CFBD0010FCF5 /* DarkBackground.swift */; };
+		9C81AD772407D0000010FCF5 /* ColorfulBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD762407D0000010FCF5 /* ColorfulBackground.swift */; };
+		9C81AD7F2407D1AE0010FCF5 /* DarkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD7E2407D1AE0010FCF5 /* DarkButtonStyle.swift */; };
+		9C81AD812407D1BB0010FCF5 /* ColorfulButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD802407D1BB0010FCF5 /* ColorfulButtonStyle.swift */; };
+		9C81AD842407D1F60010FCF5 /* DarkToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD832407D1F60010FCF5 /* DarkToggleStyle.swift */; };
+		9C81AD862407D1FF0010FCF5 /* ColorfulToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81AD852407D1FF0010FCF5 /* ColorfulToggleStyle.swift */; };
 		9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */; };
 		9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */; };
 		9C974B9523F1DBDE006AC63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9423F1DBDE006AC63A /* Assets.xcassets */; };
@@ -56,6 +63,13 @@
 		9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenInterceptor.swift; sourceTree = "<group>"; };
 		9C628CE823FB1A44005F8F06 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		9C81AD6F2407CE560010FCF5 /* Color+Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Palette.swift"; sourceTree = "<group>"; };
+		9C81AD712407CEE60010FCF5 /* LinearGradient+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LinearGradient+Extensions.swift"; sourceTree = "<group>"; };
+		9C81AD742407CFBD0010FCF5 /* DarkBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBackground.swift; sourceTree = "<group>"; };
+		9C81AD762407D0000010FCF5 /* ColorfulBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulBackground.swift; sourceTree = "<group>"; };
+		9C81AD7E2407D1AE0010FCF5 /* DarkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkButtonStyle.swift; sourceTree = "<group>"; };
+		9C81AD802407D1BB0010FCF5 /* ColorfulButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButtonStyle.swift; sourceTree = "<group>"; };
+		9C81AD832407D1F60010FCF5 /* DarkToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkToggleStyle.swift; sourceTree = "<group>"; };
+		9C81AD852407D1FF0010FCF5 /* ColorfulToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulToggleStyle.swift; sourceTree = "<group>"; };
 		9C974B8B23F1DBDE006AC63A /* SUICTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUICTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +150,9 @@
 		9C81AD6D2407CDA30010FCF5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9C81AD732407CF990010FCF5 /* Backgrounds */,
+				9C81AD782407D11C0010FCF5 /* Buttons */,
+				9C81AD792407D1250010FCF5 /* Toogle */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -144,8 +161,59 @@
 			isa = PBXGroup;
 			children = (
 				9C81AD6F2407CE560010FCF5 /* Color+Palette.swift */,
+				9C81AD712407CEE60010FCF5 /* LinearGradient+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9C81AD732407CF990010FCF5 /* Backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				9C81AD742407CFBD0010FCF5 /* DarkBackground.swift */,
+				9C81AD762407D0000010FCF5 /* ColorfulBackground.swift */,
+			);
+			path = Backgrounds;
+			sourceTree = "<group>";
+		};
+		9C81AD782407D11C0010FCF5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		9C81AD792407D1250010FCF5 /* Toogle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Toogle;
+			sourceTree = "<group>";
+		};
+		9C81AD7C2407D1860010FCF5 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				9C81AD822407D1E00010FCF5 /* Toggle */,
+				9C81AD7D2407D18E0010FCF5 /* Buttons */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		9C81AD7D2407D18E0010FCF5 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9C81AD7E2407D1AE0010FCF5 /* DarkButtonStyle.swift */,
+				9C81AD802407D1BB0010FCF5 /* ColorfulButtonStyle.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		9C81AD822407D1E00010FCF5 /* Toggle */ = {
+			isa = PBXGroup;
+			children = (
+				9C81AD832407D1F60010FCF5 /* DarkToggleStyle.swift */,
+				9C81AD852407D1FF0010FCF5 /* ColorfulToggleStyle.swift */,
+			);
+			path = Toggle;
 			sourceTree = "<group>";
 		};
 		9C974B8223F1DBDD006AC63A = {
@@ -175,6 +243,7 @@
 				9C974BB623F1E79A006AC63A /* Models */,
 				9C974BB723F1E7A8006AC63A /* Modules */,
 				9C81AD6D2407CDA30010FCF5 /* Views */,
+				9C81AD7C2407D1860010FCF5 /* Styles */,
 				9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */,
 				9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */,
 				9C974B9423F1DBDE006AC63A /* Assets.xcassets */,
@@ -364,21 +433,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C81AD722407CEE60010FCF5 /* LinearGradient+Extensions.swift in Sources */,
 				9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */,
 				9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
+				9C81AD7F2407D1AE0010FCF5 /* DarkButtonStyle.swift in Sources */,
 				9CE74C22240195B7001D9369 /* LoginInteractor.swift in Sources */,
+				9C81AD842407D1F60010FCF5 /* DarkToggleStyle.swift in Sources */,
 				9C628CE523FB1851005F8F06 /* APIClient.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
+				9C81AD752407CFBD0010FCF5 /* DarkBackground.swift in Sources */,
 				9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */,
 				9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */,
 				9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */,
+				9C81AD862407D1FF0010FCF5 /* ColorfulToggleStyle.swift in Sources */,
 				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
 				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,
 				9C81AD702407CE560010FCF5 /* Color+Palette.swift in Sources */,
 				9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
 				B401CEC723F9BBA400CD6356 /* LoginModel.swift in Sources */,
+				9C81AD772407D0000010FCF5 /* ColorfulBackground.swift in Sources */,
+				9C81AD812407D1BB0010FCF5 /* ColorfulButtonStyle.swift in Sources */,
 				9C987FA823F332A5002E104D /* Constants.swift in Sources */,
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
 				9C628CE923FB1A44005F8F06 /* Pagination.swift in Sources */,

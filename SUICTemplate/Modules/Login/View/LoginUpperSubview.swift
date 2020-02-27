@@ -35,7 +35,7 @@ struct LoginUpperSubview : View {
                                text: $model.password)
                     .disabled(model.loading)
             }
-            .background(Color.Palette.surface)
+            .background(Color.Palette.surfaceDark)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
             .shadow(color: Color.Palette.shadow, radius: 30, x: 5, y: 5)
             .padding(.horizontal, 16)
@@ -61,7 +61,7 @@ struct LoginUpperSubview : View {
             .padding(16)
             .padding(.bottom, 25)
         }
-        .background(Color.Palette.surface)
+        .background(Color.Palette.surfaceDark)
         .opacity(isAnimating ? 1 : 0)
         .clipShape(
             RoundedRectangle(

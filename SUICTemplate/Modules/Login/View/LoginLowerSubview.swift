@@ -34,7 +34,7 @@ struct LoginLowerSubview : View {
             }
             .padding(.horizontal, 36)
             .padding(.vertical, 12)
-            .background(Color.Palette.surface)
+            .background(Color.Palette.surfaceDark)
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.5))
         }

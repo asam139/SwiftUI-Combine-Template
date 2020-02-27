@@ -30,11 +30,11 @@ struct LoginLowerSubview : View {
                 .lineSpacing(10)
                 .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.3))
             Button(action: { self.isAnimating.toggle() }) {
-                Text(Localizable.Common.skip).foregroundColor(Palette.primary)
+                Text(Localizable.Common.skip).foregroundColor(Color.Palette.primary)
             }
             .padding(.horizontal, 36)
             .padding(.vertical, 12)
-            .background(Palette.surface)
+            .background(Color.Palette.surface)
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.5))
         }

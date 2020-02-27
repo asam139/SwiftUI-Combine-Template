@@ -28,7 +28,7 @@ struct LoginView : View {
                 self.show = true
             }
         }
-        .background(Palette.primary)
+        .background(Color.Palette.primary)
         .edgesIgnoringSafeArea(.all)
     }
 

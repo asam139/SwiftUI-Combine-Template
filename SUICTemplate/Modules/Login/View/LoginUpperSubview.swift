@@ -35,9 +35,9 @@ struct LoginUpperSubview : View {
                                text: $model.password)
                     .disabled(model.loading)
             }
-            .background(Palette.surface)
+            .background(Color.Palette.surface)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-            .shadow(color: Palette.shadow, radius: 30, x: 5, y: 5)
+            .shadow(color: Color.Palette.shadow, radius: 30, x: 5, y: 5)
             .padding(.horizontal, 16)
             .padding(.top, 30)
             .modifier(LoginAnimationModifier(animate: $isAnimating))
@@ -53,15 +53,15 @@ struct LoginUpperSubview : View {
                 }
                 .padding(.horizontal, 36)
                 .padding(.vertical, 12)
-                .background(Palette.primaryDark)
+                .background(Color.Palette.primaryDark)
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                .accentColor(canLogin ? Palette.white : Palette.gray)
+                .accentColor(canLogin ? Color.Palette.white : Color.Palette.gray)
                 .disabled(!canLogin)
             }
             .padding(16)
             .padding(.bottom, 25)
         }
-        .background(Palette.surface)
+        .background(Color.Palette.surface)
         .opacity(isAnimating ? 1 : 0)
         .clipShape(
             RoundedRectangle(

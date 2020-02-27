@@ -12,8 +12,8 @@ struct ColorfulBackground<S: Shape>: View {
     var isHighlighted: Bool
     var shape: S
 
-    var hightlightStart = Color.Palette.darkHighlight
-    var hightlightEnd = Color.Palette.lightHighlight
+    var hightlightStart = Color.Palette.lightHighlight
+    var hightlightEnd = Color.Palette.darkHighlight
 
     var surfaceStart = Color.Palette.surfaceLight
     var surfaceEnd = Color.Palette.surfaceDark
@@ -30,8 +30,8 @@ struct ColorfulBackground<S: Shape>: View {
                 shape
                     .fill(LinearGradient(surfaceStart, surfaceEnd))
                     .overlay(shape.stroke(LinearGradient(hightlightStart, hightlightEnd), lineWidth: 4))
-                    .shadow(color: surfaceStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: surfaceEnd, radius: 10, x: 10, y: 10)
+                    .shadow(color: surfaceStart, radius: 10, x: -5, y: -5)
+                    .shadow(color: surfaceEnd, radius: 10, x: 5, y: 5)
             }
         }
     }

@@ -28,7 +28,7 @@ extension Color {
         static let surfaceDark =  Color("surfaceDark")
         static let surfaceLight = Color("surfaceLight")
 
-        static let darkHighlight = Color(red: 60 / 255, green: 160 / 255, blue: 240 / 255)
-        static let lightHighlight = Color(red: 30 / 255, green: 80 / 255, blue: 120 / 255)
+        static let darkHighlight = Color("highlightDark")
+        static let lightHighlight = Color("highlightLight")
     }
 }

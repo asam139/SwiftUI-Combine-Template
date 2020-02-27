@@ -27,8 +27,8 @@ struct DarkBackground<S: Shape>: View {
                 shape
                     .fill(LinearGradient(surfaceStart, surfaceEnd))
                     .overlay(shape.stroke(surfaceEnd, lineWidth: 4))
-                    .shadow(color: surfaceStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: surfaceEnd, radius: 10, x: 10, y: 10)
+                    .shadow(color: surfaceStart, radius: 10, x: -5, y: -5)
+                    .shadow(color: surfaceEnd, radius: 10, x: 5, y: 5)
             }
         }
     }

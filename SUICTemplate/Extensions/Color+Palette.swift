@@ -19,16 +19,16 @@ extension Color {
         static let secondaryLight = Color("secondaryLight")
         static let shadow = Color("shadow")
         static let secondaryShadow = Color("secondaryShadow")
-        static let white = Color("white")
-        static let black = Color("black")
-        static let gray = Color("gray")
-
-        static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
 
         static let surfaceDark =  Color("surfaceDark")
         static let surfaceLight = Color("surfaceLight")
 
         static let darkHighlight = Color("highlightDark")
         static let lightHighlight = Color("highlightLight")
+
+        static let black = Color("black")
+        static let white = Color("white")
+        static let whiteUni = Color("whiteUni")
+        static let gray = Color("gray")
     }
 }

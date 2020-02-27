@@ -50,12 +50,10 @@ struct LoginUpperSubview : View {
                 Spacer()
                 Button(action: onLogin) {
                     Text(Localizable.Login.logIn)
+                        .padding(.horizontal, 36)
+                        .padding(.vertical, 12)
                 }
-                .padding(.horizontal, 36)
-                .padding(.vertical, 12)
-                .background(Color.Palette.primaryDark)
-                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                .accentColor(canLogin ? Color.Palette.white : Color.Palette.gray)
+                .buttonStyle(ColorfulButtonStyle(shape: RoundedRectangle(cornerRadius: 5)))
                 .disabled(!canLogin)
             }
             .padding(16)

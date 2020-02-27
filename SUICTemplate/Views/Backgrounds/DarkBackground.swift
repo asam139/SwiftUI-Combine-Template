@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct DarkBackground<S: Shape>: View {
-    var isHighlighted: Bool
+    var isHighlighted: Bool = false
+    var isEnabled: Bool = true
     var shape: S
 
     var surfaceStart = Color.Palette.surfaceLight
@@ -23,9 +24,15 @@ struct DarkBackground<S: Shape>: View {
                     .overlay(shape.stroke(LinearGradient(surfaceStart, surfaceEnd), lineWidth: 4))
                     .shadow(color: surfaceStart, radius: 10, x: 5, y: 5)
                     .shadow(color: surfaceEnd, radius: 10, x: -5, y: -5)
-            } else {
+            } else if isEnabled {
                 shape
                     .fill(LinearGradient(surfaceStart, surfaceEnd))
+                    .overlay(shape.stroke(LinearGradient(surfaceEnd, surfaceStart), lineWidth: 4))
+                    .shadow(color: surfaceStart, radius: 10, x: -5, y: -5)
+                    .shadow(color: surfaceEnd, radius: 10, x: 5, y: 5)
+            } else {
+                shape
+                    .fill(surfaceStart)
                     .overlay(shape.stroke(surfaceEnd, lineWidth: 4))
                     .shadow(color: surfaceStart, radius: 10, x: -5, y: -5)
                     .shadow(color: surfaceEnd, radius: 10, x: 5, y: 5)

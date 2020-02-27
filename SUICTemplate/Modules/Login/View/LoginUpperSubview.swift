@@ -61,7 +61,7 @@ struct LoginUpperSubview : View {
             .padding(16)
             .padding(.bottom, 25)
         }
-        .background(Color.Palette.surfaceDark)
+        .background(Color.Palette.surfaceLight)
         .opacity(isAnimating ? 1 : 0)
         .clipShape(
             RoundedRectangle(

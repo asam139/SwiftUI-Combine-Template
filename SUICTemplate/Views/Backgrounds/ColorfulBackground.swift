@@ -12,26 +12,26 @@ struct ColorfulBackground<S: Shape>: View {
     var isHighlighted: Bool
     var shape: S
 
-    var lightStart = Color.Palette.darkHighlight
-    var lightEnd = Color.Palette.lightHighlight
+    var hightlightStart = Color.Palette.darkHighlight
+    var hightlightEnd = Color.Palette.lightHighlight
 
-    var darkStart = Color.Palette.surfaceLight
-    var darkEnd = Color.Palette.surfaceDark
+    var surfaceStart = Color.Palette.surfaceLight
+    var surfaceEnd = Color.Palette.surfaceDark
 
     var body: some View {
         ZStack {
             if isHighlighted {
                 shape
-                    .fill(LinearGradient(lightEnd, lightStart))
-                    .overlay(shape.stroke(LinearGradient(lightStart, lightEnd), lineWidth: 4))
-                    .shadow(color: darkStart, radius: 10, x: 5, y: 5)
-                    .shadow(color: darkEnd, radius: 10, x: -5, y: -5)
+                    .fill(LinearGradient(hightlightEnd, hightlightStart))
+                    .overlay(shape.stroke(LinearGradient(hightlightStart, hightlightEnd), lineWidth: 4))
+                    .shadow(color: surfaceStart, radius: 10, x: 5, y: 5)
+                    .shadow(color: surfaceEnd, radius: 10, x: -5, y: -5)
             } else {
                 shape
-                    .fill(LinearGradient(darkStart, darkEnd))
-                    .overlay(shape.stroke(LinearGradient(lightStart, lightEnd), lineWidth: 4))
-                    .shadow(color: darkStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: darkEnd, radius: 10, x: 10, y: 10)
+                    .fill(LinearGradient(surfaceStart, surfaceEnd))
+                    .overlay(shape.stroke(LinearGradient(hightlightStart, hightlightEnd), lineWidth: 4))
+                    .shadow(color: surfaceStart, radius: 10, x: -10, y: -10)
+                    .shadow(color: surfaceEnd, radius: 10, x: 10, y: 10)
             }
         }
     }

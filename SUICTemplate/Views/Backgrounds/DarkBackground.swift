@@ -12,23 +12,23 @@ struct DarkBackground<S: Shape>: View {
     var isHighlighted: Bool
     var shape: S
 
-    var darkStart = Color.Palette.surfaceLight
-    var darkEnd = Color.Palette.surfaceDark
+    var surfaceStart = Color.Palette.surfaceLight
+    var surfaceEnd = Color.Palette.surfaceDark
 
     var body: some View {
         ZStack {
             if isHighlighted {
                 shape
-                    .fill(LinearGradient(darkEnd, darkStart))
-                    .overlay(shape.stroke(LinearGradient(darkStart, darkEnd), lineWidth: 4))
-                    .shadow(color: darkStart, radius: 10, x: 5, y: 5)
-                    .shadow(color: darkEnd, radius: 10, x: -5, y: -5)
+                    .fill(LinearGradient(surfaceEnd, surfaceStart))
+                    .overlay(shape.stroke(LinearGradient(surfaceStart, surfaceEnd), lineWidth: 4))
+                    .shadow(color: surfaceStart, radius: 10, x: 5, y: 5)
+                    .shadow(color: surfaceEnd, radius: 10, x: -5, y: -5)
             } else {
                 shape
-                    .fill(LinearGradient(darkStart, darkEnd))
-                    .overlay(shape.stroke(darkEnd, lineWidth: 4))
-                    .shadow(color: darkStart, radius: 10, x: -10, y: -10)
-                    .shadow(color: darkEnd, radius: 10, x: 10, y: 10)
+                    .fill(LinearGradient(surfaceStart, surfaceEnd))
+                    .overlay(shape.stroke(surfaceEnd, lineWidth: 4))
+                    .shadow(color: surfaceStart, radius: 10, x: -10, y: -10)
+                    .shadow(color: surfaceEnd, radius: 10, x: 10, y: 10)
             }
         }
     }

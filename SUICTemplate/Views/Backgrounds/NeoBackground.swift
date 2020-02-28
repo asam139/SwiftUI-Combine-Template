@@ -1,5 +1,5 @@
 //
-//  ColorfulBackground.swift
+//  NeoBackground.swift
 //  SUICTemplate
 //
 //  Created by Saul Moreno Abril on 27/02/2020.
@@ -8,14 +8,12 @@
 
 import SwiftUI
 
-struct ColorfulBackground<S: Shape>: View {
+struct NeoBackground<S: Shape>: View {
     var isHighlighted: Bool = false
     var isEnabled: Bool = true
     var shape: S
 
-    var hightlightStart = Color.Palette.lightHighlight
-    var hightlightEnd = Color.Palette.darkHighlight
-
+    var hightlight = Color.Palette.lightHighlight
     var surfaceStart = Color.Palette.surfaceLight
     var surfaceEnd = Color.Palette.surfaceDark
 
@@ -23,32 +21,27 @@ struct ColorfulBackground<S: Shape>: View {
         ZStack {
             if isHighlighted {
                 shape
-                    .fill(LinearGradient(hightlightEnd, hightlightStart))
+                    .fill(hightlight)
                     .shadow(color: surfaceStart, radius: 5, x: 5, y: 5)
                     .shadow(color: surfaceEnd, radius: 5, x: -5, y: -5)
-                    .overlay(shape.stroke(LinearGradient(hightlightStart, hightlightEnd), lineWidth: 4))
 
             } else if isEnabled {
                 shape
-                    .fill(LinearGradient(surfaceStart, surfaceEnd))
+                    .fill(surfaceStart)
                     .shadow(color: surfaceStart, radius: 5, x: -5, y: -5)
                     .shadow(color: surfaceEnd, radius: 5, x: 5, y: 5)
-                    .overlay(shape.stroke(LinearGradient(hightlightStart, hightlightEnd), lineWidth: 4))
-
             } else {
                 shape
                     .fill(surfaceStart)
                     .shadow(color: surfaceStart, radius: 5, x: -5, y: -5)
                     .shadow(color: surfaceEnd, radius: 5, x: 5, y: 5)
-                    .overlay(shape.stroke(surfaceEnd, lineWidth: 4))
-
             }
         }
     }
 }
 
-struct ColorfulBackground_Previews: PreviewProvider {
+struct NeoBackground_Previews: PreviewProvider {
     static var previews: some View {
-        ColorfulBackground(isHighlighted: true, shape: Circle())
+        NeoBackground(isHighlighted: true, shape: Circle())
     }
 }

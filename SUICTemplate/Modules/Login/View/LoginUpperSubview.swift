@@ -37,7 +37,7 @@ struct LoginUpperSubview : View {
             }
             .background(Color.Palette.surfaceDark)
             .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-            .shadow(color: Color.Palette.shadow, radius: 30, x: 5, y: 5)
+            //.shadow(color: Color.Palette.shadow, radius: 30, x: 5, y: 5)
             .padding(.horizontal, 16)
             .padding(.top, 30)
             .modifier(LoginAnimationModifier(animate: $isAnimating))
@@ -53,7 +53,7 @@ struct LoginUpperSubview : View {
                         .padding(.horizontal, 36)
                         .padding(.vertical, 12)
                 }
-                .buttonStyle(ColorfulButtonStyle(shape: RoundedRectangle(cornerRadius: 5)))
+                .buttonStyle(NeoButtonStyle(shape: RoundedRectangle(cornerRadius: 5)))
                 .disabled(!canLogin)
             }
             .padding(16)

@@ -1,5 +1,5 @@
 //
-//  ColorfulButtonStyle.swift
+//  NeoButtonStyle.swift
 //  SUICTemplate
 //
 //  Created by Saul Moreno Abril on 27/02/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ColorfulButtonStyle<S: Shape>: ButtonStyle {
+struct NeoButtonStyle<S: Shape>: ButtonStyle {
     var shape: S
 
     func makeBody(configuration: Self.Configuration) -> some View {
@@ -25,7 +25,7 @@ struct ColorfulButtonStyle<S: Shape>: ButtonStyle {
                 .foregroundColor(foregroundColor)
                 .contentShape(shape)
                 .background(
-                    ColorfulBackground(isHighlighted: configuration.isPressed,
+                    NeoBackground(isHighlighted: configuration.isPressed,
                                        isEnabled: isEnabled,
                                        shape: shape)
                 )

@@ -1,5 +1,5 @@
 //
-//  DarkToggleStyle.swift
+//  NeoToggleStyle.swift
 //  SUICTemplate
 //
 //  Created by Saul Moreno Abril on 27/02/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct DarkToggleStyle: ToggleStyle {
+struct NeoToggleStyle: ToggleStyle {
     func makeBody(configuration: Self.Configuration) -> some View {
         Button(action: {
             configuration.isOn.toggle()
@@ -18,7 +18,7 @@ struct DarkToggleStyle: ToggleStyle {
                 .contentShape(Circle())
         }
         .background(
-            DarkBackground(isHighlighted: configuration.isOn, shape: Circle())
+            NeoBackground(isHighlighted: configuration.isOn, shape: Circle())
         )
     }
 }

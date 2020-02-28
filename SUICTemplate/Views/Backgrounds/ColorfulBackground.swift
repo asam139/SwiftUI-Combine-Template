@@ -24,21 +24,24 @@ struct ColorfulBackground<S: Shape>: View {
             if isHighlighted {
                 shape
                     .fill(LinearGradient(hightlightEnd, hightlightStart))
+                    .shadow(color: surfaceStart, radius: 5, x: 5, y: 5)
+                    .shadow(color: surfaceEnd, radius: 5, x: -5, y: -5)
                     .overlay(shape.stroke(LinearGradient(hightlightStart, hightlightEnd), lineWidth: 4))
-                    .shadow(color: surfaceStart, radius: 10, x: 5, y: 5)
-                    .shadow(color: surfaceEnd, radius: 10, x: -5, y: -5)
+
             } else if isEnabled {
                 shape
                     .fill(LinearGradient(surfaceStart, surfaceEnd))
+                    .shadow(color: surfaceStart, radius: 5, x: -5, y: -5)
+                    .shadow(color: surfaceEnd, radius: 5, x: 5, y: 5)
                     .overlay(shape.stroke(LinearGradient(hightlightStart, hightlightEnd), lineWidth: 4))
-                    .shadow(color: surfaceStart, radius: 10, x: -5, y: -5)
-                    .shadow(color: surfaceEnd, radius: 10, x: 5, y: 5)
+
             } else {
                 shape
-                   .fill(surfaceStart)
-                   .overlay(shape.stroke(surfaceEnd, lineWidth: 4))
-                   .shadow(color: surfaceStart, radius: 10, x: -5, y: -5)
-                   .shadow(color: surfaceEnd, radius: 10, x: 5, y: 5)
+                    .fill(surfaceStart)
+                    .shadow(color: surfaceStart, radius: 5, x: -5, y: -5)
+                    .shadow(color: surfaceEnd, radius: 5, x: 5, y: 5)
+                    .overlay(shape.stroke(surfaceEnd, lineWidth: 4))
+
             }
         }
     }

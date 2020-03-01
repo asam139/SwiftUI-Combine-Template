@@ -26,6 +26,6 @@ struct HomeView : View {
             List(examples, id: \.self) { example in
               Text(example)
             }.navigationBarTitle("List")
-        }.navigationBarTitle("List")
+        }
     }
 }

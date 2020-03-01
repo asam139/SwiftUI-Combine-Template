@@ -21,8 +21,10 @@ enum Localizable {
         static let emailPlaceholder = NSLocalizedString("LOGIN_EMAIL_PLACEHOLDER_KEY", comment: "Your email")
         static let passwordPlaceholder = NSLocalizedString("LOGIN_PASSWORD_PLACEHOLDER_KEY", comment: "Your password")
         static let forgotPassword = NSLocalizedString("LOGIN_FORGOT_PASSWORD_KEY", comment: "Forgot password?")
+         static let newUser = NSLocalizedString("LOGIN_NEW_USER_KEY", comment: "New user?")
 
         static let logIn = NSLocalizedString("LOGIN_LOG_IN_KEY", comment: "Log in")
+        static let signUp = NSLocalizedString("LOGIN_SIGN_UP_KEY", comment: "Sign Up")
 
         static let figureTitle = NSLocalizedString("LOGIN_FIGURE_TITLE_KEY", comment: "Figure title")
         static let figureSubtitle = NSLocalizedString("LOGIN_FIGURE_SUBTITLE_KEY", comment: "Figure subtitle")

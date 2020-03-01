@@ -31,8 +31,8 @@ extension LoginInteractor: LoginInteractorApi {
             switch value {
             case .failure(let error):
                 self?.presenter.loginFailed(error: error)
-
-            case .finished: break
+            case .finished:
+                break
             }
         }, receiveValue: { [weak self] userToken in
             self?.presenter.loginSuccessful(userToken: userToken)

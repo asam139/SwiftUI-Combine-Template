@@ -23,7 +23,6 @@ struct LoginUpperSubview : View {
                 .frame(height: isScreenTall ? 75 : 50)
                 .padding(.top, 40)
                 .modifier(LoginAnimationModifier(animate: $animate))
-
             VStack(spacing: 0) {
                 LoginTextField(imageSystemName: "person.crop.circle.fill",
                                placeholder: Localizable.Login.emailPlaceholder,
@@ -39,26 +38,35 @@ struct LoginUpperSubview : View {
                 NeoBackground(shape: RoundedRectangle(cornerRadius: 20, style: .continuous))
             )
             .padding(.horizontal, 16)
-            .padding(.top, 30)
+            .padding(.top, 20)
             .modifier(LoginAnimationModifier(animate: $animate))
 
             HStack {
                 Text(Localizable.Login.forgotPassword)
                     .font(.subheadline)
-                    .underline()
                     .foregroundColor(Color.Palette.primary)
                     .padding(.leading, 12)
                 Spacer()
                 Button(action: onLogin) {
                     Text(Localizable.Login.logIn)
-                        .padding(.horizontal, 36)
-                        .padding(.vertical, 12)
+                        .padding(.horizontal, 24)
+                        .padding(.vertical, 8)
                 }
                 .buttonStyle(NeoButtonStyle(shape: RoundedRectangle(cornerRadius: 5)))
                 .disabled(!canLogin)
             }
             .padding(16)
-            .padding(.bottom, 25)
+            HStack {
+                Text(Localizable.Login.newUser)
+                Button(action: {
+
+                }) {
+                    Text(Localizable.Login.signUp)
+                    .foregroundColor(Color.Palette.primary)
+                }
+            }
+            .font(.subheadline)
+            .padding(16)
         }
         .background(Color.Palette.surfaceLight)
         .opacity(animate ? 1 : 0)

@@ -33,8 +33,8 @@ struct LoginLowerSubview : View {
 
             }) {
                 Text(Localizable.Common.skip)
-                    .padding(.horizontal, 36)
-                    .padding(.vertical, 12)
+                    .padding(.horizontal, 24)
+                    .padding(.vertical, 8)
             }
             .buttonStyle(NeoButtonStyle(shape: RoundedRectangle(cornerRadius: 5),
                                         colors: skipButtonColors))

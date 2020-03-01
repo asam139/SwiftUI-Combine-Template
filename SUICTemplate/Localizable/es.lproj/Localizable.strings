@@ -20,8 +20,14 @@
 /* Log in */
 "LOGIN_LOG_IN_KEY" = "Inicia sesión";
 
+/* New user? */
+"LOGIN_NEW_USER_KEY" = "¿Nuevo?";
+
 /* Your password */
 "LOGIN_PASSWORD_PLACEHOLDER_KEY" = "Introduce tu contraseña";
+
+/* Sign Up */
+"LOGIN_SIGN_UP_KEY" = "Create";
 
 /* Ok */
 "OK_KEY" = "Ok";

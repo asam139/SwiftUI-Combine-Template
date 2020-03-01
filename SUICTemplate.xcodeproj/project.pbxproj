@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C19971C240BCC05001E9B8B /* NeoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19971B240BCC05001E9B8B /* NeoColors.swift */; };
 		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
 		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
 		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C19971B240BCC05001E9B8B /* NeoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoColors.swift; sourceTree = "<group>"; };
 		9C3E923323F5E10E009ADA6E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				9C81AD732407CF990010FCF5 /* Backgrounds */,
 				9C81AD782407D11C0010FCF5 /* Buttons */,
 				9C81AD792407D1250010FCF5 /* Toogle */,
+				9C19971B240BCC05001E9B8B /* NeoColors.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				9C81AD702407CE560010FCF5 /* Color+Palette.swift in Sources */,
 				9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
+				9C19971C240BCC05001E9B8B /* NeoColors.swift in Sources */,
 				B401CEC723F9BBA400CD6356 /* LoginModel.swift in Sources */,
 				9C81AD772407D0000010FCF5 /* NeoBackground.swift in Sources */,
 				9C81AD812407D1BB0010FCF5 /* NeoButtonStyle.swift in Sources */,

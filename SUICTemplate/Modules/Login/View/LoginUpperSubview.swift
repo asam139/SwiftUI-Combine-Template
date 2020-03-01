@@ -35,9 +35,9 @@ struct LoginUpperSubview : View {
                                text: $model.password)
                     .disabled(model.loading)
             }
-            .background(Color.Palette.surfaceDark)
-            .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-            //.shadow(color: Color.Palette.shadow, radius: 30, x: 5, y: 5)
+            .background(
+                NeoBackground(shape: RoundedRectangle(cornerRadius: 20, style: .continuous))
+            )
             .padding(.horizontal, 16)
             .padding(.top, 30)
             .modifier(LoginAnimationModifier(animate: $isAnimating))
@@ -46,6 +46,7 @@ struct LoginUpperSubview : View {
                 Text(Localizable.Login.forgotPassword)
                     .font(.subheadline)
                     .underline()
+                    .foregroundColor(Color.Palette.primary)
                     .padding(.leading, 12)
                 Spacer()
                 Button(action: onLogin) {

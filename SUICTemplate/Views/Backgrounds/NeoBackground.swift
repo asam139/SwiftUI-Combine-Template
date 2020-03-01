@@ -12,29 +12,28 @@ struct NeoBackground<S: Shape>: View {
     var isHighlighted: Bool = false
     var isEnabled: Bool = true
     var shape: S
+    var colors: NeoColors = NeoColors()
 
-    var hightlight = Color.Palette.primary
-    var surfaceStart = Color.Palette.surfaceLight
-    var surfaceEnd = Color.Palette.surfaceDark
+    private let radius: CGFloat = 5
 
     var body: some View {
         ZStack {
             if isHighlighted {
                 shape
-                    .fill(hightlight)
-                    .shadow(color: surfaceStart, radius: 5, x: 5, y: 5)
-                    .shadow(color: surfaceEnd, radius: 5, x: -5, y: -5)
+                    .fill(colors.accent)
+                    .shadow(color: colors.surfaceStart, radius: radius, x: 5, y: 5)
+                    .shadow(color: colors.surfaceEnd, radius: radius, x: -5, y: -5)
 
             } else if isEnabled {
                 shape
-                    .fill(surfaceStart)
-                    .shadow(color: surfaceStart, radius: 5, x: -5, y: -5)
-                    .shadow(color: surfaceEnd, radius: 5, x: 5, y: 5)
+                    .fill(colors.surfaceStart)
+                    .shadow(color: colors.surfaceStart, radius: radius, x: -5, y: -5)
+                    .shadow(color: colors.surfaceEnd, radius: radius, x: 5, y: 5)
             } else {
                 shape
-                    .fill(surfaceStart)
-                    .shadow(color: surfaceStart, radius: 5, x: -5, y: -5)
-                    .shadow(color: surfaceEnd, radius: 5, x: 5, y: 5)
+                    .fill(colors.surfaceStart)
+                    .shadow(color: colors.surfaceStart, radius: radius, x: -5, y: -5)
+                    .shadow(color: colors.surfaceEnd, radius: radius, x: 5, y: 5)
             }
         }
     }

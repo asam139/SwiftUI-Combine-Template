@@ -29,13 +29,18 @@ struct LoginLowerSubview : View {
                 .multilineTextAlignment(.center)
                 .lineSpacing(10)
                 .modifier(LoginAnimationModifier(animate: $animate, delay: 0.3))
-            Button(action: { self.animate.toggle() }) {
-                Text(Localizable.Common.skip).foregroundColor(Color.Palette.primary)
+            Button(action: {
+
+            }) {
+                Text(Localizable.Common.skip)
+                    .padding(.horizontal, 36)
+                    .padding(.vertical, 12)
             }
-            .padding(.horizontal, 36)
-            .padding(.vertical, 12)
-            .background(Color.Palette.surfaceDark)
-            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+            .buttonStyle(NeoButtonStyle(shape: RoundedRectangle(cornerRadius: 5),
+                                        colors: skipButtonColors))
+
+            //.background(Color.Palette.surfaceDark)
+            //.clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
             .modifier(LoginAnimationModifier(animate: $animate, delay: 0.5))
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 350, maxHeight: .infinity)
@@ -54,6 +59,10 @@ struct LoginLowerSubview : View {
         .onDisappear {
             self.animate = false
         }
+    }
+
+    var skipButtonColors: NeoColors {
+        NeoColors(accent: .white, fill: Color.Palette.primary)
     }
 }
 

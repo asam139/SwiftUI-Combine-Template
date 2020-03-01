@@ -37,11 +37,11 @@ struct NeoButtonStyle<S: Shape>: ButtonStyle {
 
         var foregroundColor: Color {
             if configuration.isPressed {
-                return Color.Palette.whiteUni
+                return colors.accent
             } else if isEnabled {
-                return Color.Palette.primary
+                return colors.accent
             }
-            return Color.Palette.surfaceDark
+            return colors.disabledAccent
         }
     }
 }

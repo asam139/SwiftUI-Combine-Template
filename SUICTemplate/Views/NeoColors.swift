@@ -10,6 +10,9 @@ import SwiftUI
 
 struct NeoColors {
     var accent: Color = Color.Palette.primary
-    var surfaceStart: Color = Color.Palette.surfaceLight
-    var surfaceEnd: Color = Color.Palette.surfaceDark
+    var disabledAccent = Color.Palette.surfaceDark
+
+    var fill: Color = Color.Palette.surfaceLight
+    var shadowTop: Color = Color.Palette.shadowTop
+    var shadowBottom: Color = Color.Palette.shadowBottom
 }

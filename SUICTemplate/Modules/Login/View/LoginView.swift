@@ -18,7 +18,7 @@ struct LoginView : View {
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                LoginUpperSubview(model: self.loginModel, onLogin: self.onLogin)
+                LoginUpperSubview(onLogin: self.onLogin)
                 Spacer()
                 LoginLowerSubview()
             }

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LoginUpperSubview : View {
-    @ObservedObject var model: LoginModel
+    @EnvironmentObject var loginModel: LoginModel
     @State var animate: Bool = false
 
     var onLogin: () -> Void
@@ -27,13 +27,13 @@ struct LoginUpperSubview : View {
             VStack(spacing: 0) {
                 LoginTextField(imageSystemName: "person.crop.circle.fill",
                                placeholder: Localizable.Login.emailPlaceholder,
-                               text: $model.email)
-                    .disabled(model.loading)
+                               text: $loginModel.email)
+                    .disabled(loginModel.loading)
                 Divider()
                 LoginTextField(imageSystemName: "lock.fill",
                                placeholder: Localizable.Login.passwordPlaceholder,
-                               text: $model.password)
-                    .disabled(model.loading)
+                               text: $loginModel.password)
+                    .disabled(loginModel.loading)
             }
             .background(
                 NeoBackground(shape: RoundedRectangle(cornerRadius: 20, style: .continuous))
@@ -78,16 +78,16 @@ struct LoginUpperSubview : View {
     }
 
     var canLogin: Bool {
-        return model.isValid && !model.loading
+        return loginModel.isValid && !loginModel.loading
     }
 }
 
 #if DEBUG
 struct LoginUpperView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginUpperSubview(model: LoginModel(), onLogin: {
+        LoginUpperSubview(onLogin: {
             print("Login")
-        })
+        }).environmentObject(LoginModel())
     }
 }
 #endif

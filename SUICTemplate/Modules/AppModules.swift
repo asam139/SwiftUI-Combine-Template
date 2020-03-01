@@ -11,4 +11,5 @@ import Viperit
 // MARK: - Application modules
 enum AppModules: String, ViperitModule {
     case login
+    case home
 }

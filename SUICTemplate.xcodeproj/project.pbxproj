@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9C19971C240BCC05001E9B8B /* NeoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19971B240BCC05001E9B8B /* NeoColors.swift */; };
+		9C19972B240C47AC001E9B8B /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972A240C47AC001E9B8B /* SignUpModel.swift */; };
+		9C199731240C4878001E9B8B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972C240C4878001E9B8B /* HomePresenter.swift */; };
+		9C199732240C4878001E9B8B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972D240C4878001E9B8B /* HomeRouter.swift */; };
+		9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972E240C4878001E9B8B /* HomeModuleApi.swift */; };
+		9C199734240C4878001E9B8B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972F240C4878001E9B8B /* HomeInteractor.swift */; };
+		9C199735240C4878001E9B8B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C199730240C4878001E9B8B /* HomeView.swift */; };
 		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
 		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
 		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
@@ -47,6 +53,12 @@
 
 /* Begin PBXFileReference section */
 		9C19971B240BCC05001E9B8B /* NeoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoColors.swift; sourceTree = "<group>"; };
+		9C19972A240C47AC001E9B8B /* SignUpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
+		9C19972C240C4878001E9B8B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		9C19972D240C4878001E9B8B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		9C19972E240C4878001E9B8B /* HomeModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleApi.swift; sourceTree = "<group>"; };
+		9C19972F240C4878001E9B8B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		9C199730240C4878001E9B8B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9C3E923323F5E10E009ADA6E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -101,6 +113,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C199729240C4795001E9B8B /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				9C19972A240C47AC001E9B8B /* SignUpModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
 		9C3E923223F5E0FF009ADA6E /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +304,8 @@
 			children = (
 				9C974BB023F1DD68006AC63A /* AppModules.swift */,
 				9C974BAF23F1DD24006AC63A /* Login */,
-				B401CECA23F9BF6200CD6356 /* SignUp */,
+				9C199729240C4795001E9B8B /* SignUp */,
+				B401CECA23F9BF6200CD6356 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -298,11 +319,16 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
-		B401CECA23F9BF6200CD6356 /* SignUp */ = {
+		B401CECA23F9BF6200CD6356 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C19972C240C4878001E9B8B /* HomePresenter.swift */,
+				9C19972D240C4878001E9B8B /* HomeRouter.swift */,
+				9C19972E240C4878001E9B8B /* HomeModuleApi.swift */,
+				9C19972F240C4878001E9B8B /* HomeInteractor.swift */,
+				9C199730240C4878001E9B8B /* HomeView.swift */,
 			);
-			path = SignUp;
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,18 +456,23 @@
 				9C81AD722407CEE60010FCF5 /* LinearGradient+Extensions.swift in Sources */,
 				9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */,
 				9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */,
+				9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
 				9CE74C22240195B7001D9369 /* LoginInteractor.swift in Sources */,
 				9C628CE523FB1851005F8F06 /* APIClient.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C974BBA23F1E7BF006AC63A /* UserSettings.swift in Sources */,
+				9C199735240C4878001E9B8B /* HomeView.swift in Sources */,
 				9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */,
 				9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */,
+				9C199732240C4878001E9B8B /* HomeRouter.swift in Sources */,
 				9C81AD862407D1FF0010FCF5 /* NeoToggleStyle.swift in Sources */,
+				9C199734240C4878001E9B8B /* HomeInteractor.swift in Sources */,
 				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
 				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,
 				9C81AD702407CE560010FCF5 /* Color+Palette.swift in Sources */,
 				9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */,
+				9C199731240C4878001E9B8B /* HomePresenter.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
 				9C19971C240BCC05001E9B8B /* NeoColors.swift in Sources */,
 				B401CEC723F9BBA400CD6356 /* LoginModel.swift in Sources */,
@@ -449,6 +480,7 @@
 				9C81AD812407D1BB0010FCF5 /* NeoButtonStyle.swift in Sources */,
 				9C987FA823F332A5002E104D /* Constants.swift in Sources */,
 				9C974BAB23F1DD1D006AC63A /* LoginRouter.swift in Sources */,
+				9C19972B240C47AC001E9B8B /* SignUpModel.swift in Sources */,
 				9C628CE923FB1A44005F8F06 /* Pagination.swift in Sources */,
 				9C3E924623F71255009ADA6E /* LoginAnimationModifier.swift in Sources */,
 				9CE74C21240192E5001D9369 /* Environment.swift in Sources */,

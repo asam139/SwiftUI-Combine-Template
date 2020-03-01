@@ -11,6 +11,7 @@ import Combine
 
 // MARK: - LoginRouter API
 protocol LoginRouterApi: RouterProtocol {
+    func showHomeModule()
 }
 
 // MARK: - LoginPresenter API

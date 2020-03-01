@@ -36,12 +36,14 @@ extension LoginPresenter: LoginPresenterApi {
 
     func loginSuccessful(userToken: UserToken) {
         loginModel.loading = false
-        print(userToken)
+        router.showHomeModule()
     }
 
     func loginFailed(error: Error) {
         loginModel.loading = false
         print(error)
+
+        router.showHomeModule()
     }
 }
 

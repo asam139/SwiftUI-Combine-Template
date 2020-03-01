@@ -13,7 +13,7 @@ struct NeoBackground<S: Shape>: View {
     var isEnabled: Bool = true
     var shape: S
 
-    var hightlight = Color.Palette.lightHighlight
+    var hightlight = Color.Palette.primary
     var surfaceStart = Color.Palette.surfaceLight
     var surfaceEnd = Color.Palette.surfaceDark
 

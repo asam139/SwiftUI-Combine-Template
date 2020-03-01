@@ -36,7 +36,7 @@ struct NeoButtonStyle<S: Shape>: ButtonStyle {
             if configuration.isPressed {
                 return Color.Palette.whiteUni
             } else if isEnabled {
-                return Color.Palette.lightHighlight
+                return Color.Palette.primary
             }
             return Color.Palette.surfaceDark
         }

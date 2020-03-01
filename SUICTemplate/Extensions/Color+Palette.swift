@@ -23,9 +23,6 @@ extension Color {
         static let surfaceDark =  Color("surfaceDark")
         static let surfaceLight = Color("surfaceLight")
 
-        static let darkHighlight = Color("highlightDark")
-        static let lightHighlight = Color("highlightLight")
-
         static let black = Color("black")
         static let white = Color("white")
         static let whiteUni = Color("whiteUni")

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct LoginLowerSubview : View {
-    @Binding var isAnimating: Bool
+    @State var animate: Bool = false
 
     var body: some View {
         VStack(spacing: 20) {
@@ -17,44 +17,50 @@ struct LoginLowerSubview : View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(height: isScreenTall ? 150 : 75)
-                .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.1))
+                .modifier(LoginAnimationModifier(animate: $animate, delay: 0.1))
             Text(Localizable.Login.figureTitle)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
-                .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.3))
+                .modifier(LoginAnimationModifier(animate: $animate, delay: 0.3))
             Text(Localizable.Login.figureSubtitle)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
                 .lineSpacing(10)
-                .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.3))
-            Button(action: { self.isAnimating.toggle() }) {
+                .modifier(LoginAnimationModifier(animate: $animate, delay: 0.3))
+            Button(action: { self.animate.toggle() }) {
                 Text(Localizable.Common.skip).foregroundColor(Color.Palette.primary)
             }
             .padding(.horizontal, 36)
             .padding(.vertical, 12)
             .background(Color.Palette.surfaceDark)
             .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-            .modifier(LoginAnimationModifier(animate: $isAnimating, delay: 0.5))
+            .modifier(LoginAnimationModifier(animate: $animate, delay: 0.5))
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 350, maxHeight: .infinity)
         .padding(.horizontal, 10)
         .padding(.vertical, isScreenTall ? 30 : 15)
         .clipShape(
             RoundedRectangle(
-                cornerRadius: isAnimating && isScreenTall ? 30 : 0,
+                cornerRadius: animate && isScreenTall ? 30 : 0,
                 style: .continuous
             )
         )
         .animation(Animation.spring())
+        .onAppear {
+            self.animate = true
+        }
+        .onDisappear {
+            self.animate = false
+        }
     }
 }
 
 #if DEBUG
 struct LoginLower_Previews: PreviewProvider {
     static var previews: some View {
-        LoginLowerSubview(isAnimating: .constant(true))
+        LoginLowerSubview()
     }
 }
 #endif

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LoginUpperSubview : View {
     @ObservedObject var model: LoginModel
-    @Binding var isAnimating: Bool
+    @State var animate: Bool = false
 
     var onLogin: () -> Void
 
@@ -22,7 +22,7 @@ struct LoginUpperSubview : View {
                 .aspectRatio(contentMode: .fit)
                 .frame(height: isScreenTall ? 75 : 50)
                 .padding(.top, 10)
-                .modifier(LoginAnimationModifier(animate: $isAnimating))
+                .modifier(LoginAnimationModifier(animate: $animate))
 
             VStack(spacing: 0) {
                 LoginTextField(imageSystemName: "person.crop.circle.fill",
@@ -40,7 +40,7 @@ struct LoginUpperSubview : View {
             )
             .padding(.horizontal, 16)
             .padding(.top, 30)
-            .modifier(LoginAnimationModifier(animate: $isAnimating))
+            .modifier(LoginAnimationModifier(animate: $animate))
 
             HStack {
                 Text(Localizable.Login.forgotPassword)
@@ -61,10 +61,10 @@ struct LoginUpperSubview : View {
             .padding(.bottom, 25)
         }
         .background(Color.Palette.surfaceLight)
-        .opacity(isAnimating ? 1 : 0)
+        .opacity(animate ? 1 : 0)
         .clipShape(
             RoundedRectangle(
-                cornerRadius: isAnimating && isScreenTall ? 30 : 0,
+                cornerRadius: animate && isScreenTall ? 30 : 0,
                 style: .continuous
             )
         ).animation(Animation.spring())
@@ -78,7 +78,7 @@ struct LoginUpperSubview : View {
 #if DEBUG
 struct LoginUpperView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginUpperSubview(model: LoginModel(), isAnimating: .constant(true), onLogin: {
+        LoginUpperSubview(model: LoginModel(), onLogin: {
             print("Login")
         })
     }

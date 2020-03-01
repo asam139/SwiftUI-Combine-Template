@@ -14,18 +14,15 @@ struct LoginView : View {
     weak var presenter: LoginPresenterApi?
 
     @EnvironmentObject var loginModel: LoginModel
-    @State var show: Bool = false
 
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
                 VStack(spacing: 0) {
-                    LoginUpperSubview(model: self.loginModel,  isAnimating: self.$show, onLogin: self.onLogin)
+                    LoginUpperSubview(model: self.loginModel, onLogin: self.onLogin)
                     Spacer()
-                    LoginLowerSubview(isAnimating: self.$show)
+                    LoginLowerSubview()
                 }.padding(geometry.safeAreaInsets)
-            }.onAppear {
-                self.show = true
             }
         }
         .background(Color.Palette.primary)
@@ -43,7 +40,7 @@ struct LoginView : View {
 #if DEBUG
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(presenter: nil, show: true)
+        LoginView(presenter: nil)
     }
 }
 #endif

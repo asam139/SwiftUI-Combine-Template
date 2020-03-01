@@ -21,7 +21,7 @@ struct LoginUpperSubview : View {
                 .renderingMode(.original)
                 .aspectRatio(contentMode: .fit)
                 .frame(height: isScreenTall ? 75 : 50)
-                .padding(.top, 10)
+                .padding(.top, 40)
                 .modifier(LoginAnimationModifier(animate: $animate))
 
             VStack(spacing: 0) {
@@ -67,7 +67,14 @@ struct LoginUpperSubview : View {
                 cornerRadius: animate && isScreenTall ? 30 : 0,
                 style: .continuous
             )
-        ).animation(Animation.spring())
+        )
+        .animation(Animation.spring())
+        .onAppear {
+            self.animate = true
+        }
+        .onDisappear {
+            self.animate = false
+        }
     }
 
     var canLogin: Bool {

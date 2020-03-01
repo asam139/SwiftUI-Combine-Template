@@ -16,13 +16,11 @@ struct LoginView : View {
     @EnvironmentObject var loginModel: LoginModel
 
     var body: some View {
-        GeometryReader { geometry in
-            ScrollView {
-                VStack(spacing: 0) {
-                    LoginUpperSubview(model: self.loginModel, onLogin: self.onLogin)
-                    Spacer()
-                    LoginLowerSubview()
-                }.padding(geometry.safeAreaInsets)
+        ScrollView {
+            VStack(spacing: 0) {
+                LoginUpperSubview(model: self.loginModel, onLogin: self.onLogin)
+                Spacer()
+                LoginLowerSubview()
             }
         }
         .background(Color.Palette.primary)

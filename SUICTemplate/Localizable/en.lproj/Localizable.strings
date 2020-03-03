@@ -2,6 +2,9 @@
 /* Cancel */
 "CANCEL_KEY" = "Cancel";
 
+/* Canceled by user */
+"CANCELED_BY_USER_KEY" = "Canceled by user";
+
 /* Done */
 "DONE_KEY" = "Done";
 

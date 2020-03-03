@@ -24,22 +24,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             self.window = window
-            showLoginModule()
+            //showLoginModule()
             window.makeKeyAndVisible()
         }
 
-    }
-
-    func showLoginModule() {
-        let module = AppModules.login.build { (presenter) -> (LoginView, LoginModel) in
-            let p = presenter as! LoginPresenterApi
-            return (LoginView(presenter: p), p.loginModel)
-        }
-        let interactor = module.interactor as? LoginInteractor
-        interactor?.apiClient = APIClient()
-
-        let router = module.router as! LoginRouter
-        router.show(inWindow: self.window)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

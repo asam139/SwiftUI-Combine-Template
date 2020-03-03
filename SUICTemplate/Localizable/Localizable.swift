@@ -15,6 +15,9 @@ enum Localizable {
         static let cancel = NSLocalizedString("CANCEL_KEY", comment: "Cancel")
         static let done = NSLocalizedString("DONE_KEY", comment: "Done")
         static let skip = NSLocalizedString("SKIP_KEY", comment: "Skip")
+
+        static let canceledByUser = NSLocalizedString("CANCELED_BY_USER_KEY", comment: "Canceled by user")
+
     }
 
     enum Login {

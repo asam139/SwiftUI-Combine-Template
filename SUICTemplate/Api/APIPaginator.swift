@@ -10,15 +10,15 @@ import Foundation
 import Alamofire
 import Combine
 
-class APIPaginator<T: Decodable> {
-    private var apiClient: APIClient
+class APIPaginator<T: Decodable, P: Pagination> {
     private var disposables = Set<AnyCancellable>()
-    private var pagination = Pagination()
 
-    typealias RouteCreator = (Pagination) -> APIRouter?
+    private var apiClient: APIClient
+    private var pagination: P
+    typealias RouteCreator = (P) -> APIRouter?
     private var routeCreator: RouteCreator
 
-    public typealias PaginationUpdater = ([T], Pagination) -> Pagination?
+    public typealias PaginationUpdater = ([T], P) -> P?
     private var paginationUpdater: PaginationUpdater
 
     @Published private(set) var loading = false
@@ -27,9 +27,11 @@ class APIPaginator<T: Decodable> {
     @Published private(set) var page: Int = -1
 
     init(apiClient: APIClient,
+         pagination: P,
          routeCreator: @escaping RouteCreator,
          paginationUpdater: @escaping PaginationUpdater) {
         self.apiClient = apiClient
+        self.pagination = pagination
         self.routeCreator = routeCreator
         self.paginationUpdater = paginationUpdater
     }
@@ -88,11 +90,15 @@ class APIPaginator<T: Decodable> {
         return page > -1
     }
 
-    func reset() {
+    func reset(to pagination:P = P()) {
         disposables.removeAll()
         loading = false
         finished = false
         page = -1
-        pagination = Pagination()
+        self.pagination = pagination
     }
+}
+
+protocol Pagination: Codable {
+    init()
 }

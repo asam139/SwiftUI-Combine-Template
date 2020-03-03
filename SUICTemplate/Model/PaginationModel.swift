@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Pagination: Codable {
+struct PaginationModel: Codable {
     var offset: Int = 0
     var limit: Int = 100
 }

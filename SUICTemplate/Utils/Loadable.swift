@@ -11,7 +11,7 @@ import Foundation
 enum Loadable<T> {
 
     case notRequested
-    case isLoading(last: T?, cancelBag: CancelBag)
+    case isLoading(last: T?, cancellableBag: CancellableBag)
     case loaded(T)
     case failed(Error)
 
@@ -49,11 +49,14 @@ extension Loadable {
 
     func map<V>(_ transform: (T) -> V) -> Loadable<V> {
         switch self {
-        case .notRequested: return .notRequested
-        case let .failed(error): return .failed(error)
-        case let .isLoading(value, cancelBag): return .isLoading(last: value.map { transform($0) },
-                                                                 cancelBag: cancelBag)
-        case let .loaded(value): return .loaded(transform(value))
+        case .notRequested:
+            return .notRequested
+        case let .failed(error):
+            return .failed(error)
+        case let .isLoading(value, cancellableBag):
+            return .isLoading(last: value.map { transform($0) }, cancellableBag: cancellableBag)
+        case let .loaded(value):
+            return .loaded(transform(value))
         }
     }
 }

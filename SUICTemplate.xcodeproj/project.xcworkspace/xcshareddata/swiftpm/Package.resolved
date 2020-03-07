@@ -5,9 +5,9 @@
         "package": "Alamofire",
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
-          "branch": null,
-          "revision": "cdb2f4a574c3f7ae9ac0b0913058d64ff6fa09ac",
-          "version": "5.0.1"
+          "branch": "feature/initial-combine-support",
+          "revision": "43f9ebf03413baf1782d7516b4f475f98723cd02",
+          "version": null
         }
       },
       {

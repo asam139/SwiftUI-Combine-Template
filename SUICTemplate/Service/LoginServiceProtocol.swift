@@ -8,22 +8,41 @@
 
 import Foundation
 import Combine
+import Alamofire
 
 protocol LoginServiceProtocol {
-    func requestLogin(email: String, password: String)
+    func requestLogin(email: String, password: String) -> AnyPublisher<UserToken, AFError>
 }
 
-protocol WelcomeViewModel {
-    var hasAgreed: Bool { get }
-    var hasAgreedPublished: Published<Bool> { get }
-    var hasAgreedPublisher: Published<Bool>.Publisher { get }
-}
 
-final class DefaultWelcomeViewModel: ObservableObject, WelcomeViewModel {
-    @Published var hasAgreed: Bool = false
-    var hasAgreedPublished: Published<Bool> { _hasAgreed }
-    var hasAgreedPublisher: Published<Bool>.Publisher { $hasAgreed }
-}
+//final class LoginService: LoginServiceProtocol {
+//    var session: Session
+//    let bag = CancellableBag()
+//
+//    init(session: Session) {
+//        self.session = session
+//    }
+//
+//    func requestLogin(email: String, password: String) -> AnyPublisher<UserToken, AFError> {
+//        let decoder = JSONDecoder()
+//        decoder.dateDecodingStrategy = .iso8601
+//
+//        let route = APIRouter.login(email: email, password: password)
+//        let publisher: AnyPublisher<UserToken, AFError> =
+//            apiClient.performRequestDecodable(route: route, decoder: decoder)
+////        publisher.sink(receiveCompletion: { [weak self] value in
+////            switch value {
+////            case .failure(let error):
+////                self?.presenter.loginFailed(error: error)
+////            case .finished:
+////                break
+////            }
+////        }, receiveValue: { [weak self] userToken in
+////            self?.presenter.loginSuccessful(userToken: userToken)
+////        }).store(in: bag)
+//        return publisher
+//    }
+//}
 
 /*
  // MARK: - LoginInteractor Class

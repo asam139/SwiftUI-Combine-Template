@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-final class CancelBag {
+final class CancellableBag {
     var subscriptions = Set<AnyCancellable>()
 
     func cancel() {

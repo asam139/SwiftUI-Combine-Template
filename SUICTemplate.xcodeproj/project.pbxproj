@@ -14,6 +14,8 @@
 		9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972E240C4878001E9B8B /* HomeModuleApi.swift */; };
 		9C199734240C4878001E9B8B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972F240C4878001E9B8B /* HomeInteractor.swift */; };
 		9C199735240C4878001E9B8B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C199730240C4878001E9B8B /* HomeView.swift */; };
+		9C21D01524118B7600303A99 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01424118B7600303A99 /* WebServiceProtocol.swift */; };
+		9C21D0172411A13D00303A99 /* DataRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */; };
 		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
 		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
 		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
@@ -64,6 +66,8 @@
 		9C19972E240C4878001E9B8B /* HomeModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleApi.swift; sourceTree = "<group>"; };
 		9C19972F240C4878001E9B8B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		9C199730240C4878001E9B8B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9C21D01424118B7600303A99 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
+		9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extensions.swift"; sourceTree = "<group>"; };
 		9C3E923323F5E10E009ADA6E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		9C736D9B240EEE2A00CAA3F9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				9C21D01424118B7600303A99 /* WebServiceProtocol.swift */,
 				9C736D9C240EEE4A00CAA3F9 /* LoginServiceProtocol.swift */,
 			);
 			path = Service;
@@ -211,6 +216,7 @@
 				9C736DA2240EF64000CAA3F9 /* AnyCancellable+Extensions.swift */,
 				9C736DA4240EF80A00CAA3F9 /* CurrentValueSubject+Extensions.swift */,
 				9C736DA8240EF85B00CAA3F9 /* Subscribers+Extensions.swift */,
+				9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -506,11 +512,13 @@
 				9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */,
 				9C199731240C4878001E9B8B /* HomePresenter.swift in Sources */,
 				9C736DA9240EF85B00CAA3F9 /* Subscribers+Extensions.swift in Sources */,
+				9C21D0172411A13D00303A99 /* DataRequest+Extensions.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
 				9C736D9A240EEAB400CAA3F9 /* ViewModel.swift in Sources */,
 				9C736DA1240EF61F00CAA3F9 /* CancellableBag.swift in Sources */,
 				9C19971C240BCC05001E9B8B /* NeoColors.swift in Sources */,
 				B401CEC723F9BBA400CD6356 /* LoginViewModel.swift in Sources */,
+				9C21D01524118B7600303A99 /* WebServiceProtocol.swift in Sources */,
 				9C81AD772407D0000010FCF5 /* NeoBackground.swift in Sources */,
 				9C81AD812407D1BB0010FCF5 /* NeoButtonStyle.swift in Sources */,
 				9C987FA823F332A5002E104D /* Constants.swift in Sources */,
@@ -740,8 +748,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				branch = "feature/initial-combine-support";
+				kind = branch;
 			};
 		};
 		9C974BA223F1DCCF006AC63A /* XCRemoteSwiftPackageReference "Viperit" */ = {

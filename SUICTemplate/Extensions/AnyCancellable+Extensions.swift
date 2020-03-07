@@ -10,8 +10,7 @@ import Foundation
 import Combine
 
 extension AnyCancellable {
-
-    func store(in cancelBag: CancelBag) {
-        cancelBag.subscriptions.insert(self)
+    func store(in cancellableBag: CancellableBag) {
+        cancellableBag.subscriptions.insert(self)
     }
 }

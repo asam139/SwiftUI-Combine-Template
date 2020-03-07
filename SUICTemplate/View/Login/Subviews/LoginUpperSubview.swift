@@ -10,21 +10,9 @@ import SwiftUI
 import Combine
 
 struct LoginUpperSubview : View {
-    @State var email: String = "" {
-       didSet {
-           emailDidChange.send(email)
-       }
-    }
-    @State var password: String = "" {
-      didSet {
-          passwordDidChange.send(password)
-      }
-    }
-    @State var isValid: Bool = false
-
     // Private properties
     @EnvironmentObject
-    var viewModel: AnyViewModel<LoginState, LoginInput>
+    var viewModel: LoginViewModel
 
     private let emailDidChange = PassthroughSubject<String, Never>()
     private let passwordDidChange = PassthroughSubject<String, Never>()
@@ -33,10 +21,7 @@ struct LoginUpperSubview : View {
     @State private var animate: Bool = false
 
     init() {
-        isValidPublisher
-            .receive(on: RunLoop.main)
-            .assign(to: \.isValid, on: self)
-            .store(in: bag)
+
     }
 
     var body: some View {
@@ -51,13 +36,13 @@ struct LoginUpperSubview : View {
             VStack(spacing: 0) {
                 LoginTextField(imageSystemName: "person.crop.circle.fill",
                                placeholder: Localizable.Login.emailPlaceholder,
-                               text: $email)
-                    .disabled(viewModel.loading)
+                               text: $viewModel.state.email)
+                    .disabled(viewModel.state.loading)
                 Divider()
                 LoginTextField(imageSystemName: "lock.fill",
                                placeholder: Localizable.Login.passwordPlaceholder,
-                               text: $password)
-                    .disabled(viewModel.loading)
+                               text: $viewModel.state.password)
+                    .disabled(viewModel.state.loading)
             }
             .background(
                 NeoBackground(shape: RoundedRectangle(cornerRadius: 20, style: .continuous))
@@ -111,7 +96,7 @@ struct LoginUpperSubview : View {
     }
 
     var canLogin: Bool {
-        return isValid && !viewModel.loading
+        return viewModel.state.isValid && !viewModel.state.loading
     }
 }
 
@@ -119,53 +104,17 @@ struct LoginUpperSubview : View {
 
 extension LoginUpperSubview {
     private func onLogin() {
+        let email = viewModel.state.email
+        let password = viewModel.state.password
         print(email, password)
         viewModel.trigger(.requestLogin(email: email, password: password))
-    }
-
-    private var isEmailValidPublisher: AnyPublisher<String?, Never> {
-        return emailDidChange
-            .debounce(for: 0.5, scheduler: RunLoop.main)
-            .removeDuplicates()
-            .map { input in
-                // Simulate request
-                return Future { promise in
-                    let isValid = Self.isEmailValid(input)
-                    promise(.success(isValid ? input : nil))
-                }
-        }
-        .switchToLatest()
-        .eraseToAnyPublisher()
-    }
-
-    private var isPasswordValidPublisher: AnyPublisher<String?, Never> {
-        return passwordDidChange
-            .debounce(for: 0.5, scheduler: RunLoop.main)
-            .map { input in
-                guard !input.isEmpty else { return nil }
-                return input
-        }
-        .eraseToAnyPublisher()
-    }
-
-    private var isValidPublisher: AnyPublisher<Bool, Never> {
-      Publishers.CombineLatest(isEmailValidPublisher, isPasswordValidPublisher)
-        .map { email, password in
-            return email != nil && password != nil
-        }
-      .eraseToAnyPublisher()
-    }
-
-    private static func isEmailValid(_ text: String) -> Bool {
-        return NSPredicate(format:"SELF MATCHES %@", "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}")
-                .evaluate(with: text)
     }
 }
 
 #if DEBUG
 struct LoginUpperView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginUpperSubview().environmentObject(AnyViewModel(LoginViewModel(loginService: LoginService())))
+        LoginUpperSubview().environmentObject(LoginViewModel(loginService: LoginService()))
     }
 }
 #endif

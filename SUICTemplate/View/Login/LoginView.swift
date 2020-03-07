@@ -7,20 +7,13 @@
 //
 
 import SwiftUI
+import Combine
 import Viperit
-
-class LoginState {
-    var loading: Bool = false
-}
-
-enum LoginInput {
-    case requestLogin(email: String, password: String)
-}
 
 // MARK: LoginView SwiftUI
 struct LoginView : View {
     @EnvironmentObject
-    private var viewModel: AnyViewModel<LoginState, LoginInput>
+    var viewModel: LoginViewModel
 
     var body: some View {
         ScrollView {

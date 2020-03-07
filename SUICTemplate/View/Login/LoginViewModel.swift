@@ -9,10 +9,9 @@
 import Foundation
 import Combine
 
-class LoginViewModel : ViewModel {
+class LoginViewModel : ObservableObject {
 
-    @Published
-    private(set) var state: LoginState
+    @Published var state: LoginState
 
     private let loginService: LoginService
     private let bag = CancellableBag()
@@ -20,6 +19,12 @@ class LoginViewModel : ViewModel {
     init(loginService: LoginService) {
         self.loginService = loginService
         self.state = LoginState()
+
+        state.objectWillChange
+            .receive(on: DispatchQueue.main)
+            .sink { (_) in
+            self.objectWillChange.send()
+        }.store(in: bag)
     }
 
     func trigger(_ input: LoginInput) {

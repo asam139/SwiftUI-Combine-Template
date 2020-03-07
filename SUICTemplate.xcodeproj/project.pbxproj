@@ -16,6 +16,8 @@
 		9C199735240C4878001E9B8B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C199730240C4878001E9B8B /* HomeView.swift */; };
 		9C21D01524118B7600303A99 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01424118B7600303A99 /* WebServiceProtocol.swift */; };
 		9C21D0172411A13D00303A99 /* DataRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */; };
+		9C21D019241417A200303A99 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D018241417A200303A99 /* LoginState.swift */; };
+		9C21D01B241417CC00303A99 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01A241417CC00303A99 /* LoginInput.swift */; };
 		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
 		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
 		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
@@ -64,6 +66,8 @@
 		9C199730240C4878001E9B8B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9C21D01424118B7600303A99 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
 		9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extensions.swift"; sourceTree = "<group>"; };
+		9C21D018241417A200303A99 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
+		9C21D01A241417CC00303A99 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		9C3E923323F5E10E009ADA6E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -136,16 +140,15 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
-		9C3E923E23F70B2E009ADA6E /* View */ = {
+		9C3E923E23F70B2E009ADA6E /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
-				9C974BA923F1DD1D006AC63A /* LoginView.swift */,
 				9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */,
 				9C3E924123F70B66009ADA6E /* LoginLowerSubview.swift */,
 				9C3E924323F70D14009ADA6E /* LoginTextField.swift */,
 				9C3E924523F71255009ADA6E /* LoginAnimationModifier.swift */,
 			);
-			path = View;
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 		9C3E924723F716EC009ADA6E /* Utils */ = {
@@ -310,8 +313,11 @@
 		9C974BAF23F1DD24006AC63A /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				9C21D018241417A200303A99 /* LoginState.swift */,
 				B401CEC623F9BBA400CD6356 /* LoginViewModel.swift */,
-				9C3E923E23F70B2E009ADA6E /* View */,
+				9C974BA923F1DD1D006AC63A /* LoginView.swift */,
+				9C3E923E23F70B2E009ADA6E /* Subviews */,
+				9C21D01A241417CC00303A99 /* LoginInput.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -483,12 +489,14 @@
 				9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
 				9C736DA3240EF64000CAA3F9 /* AnyCancellable+Extensions.swift in Sources */,
+				9C21D019241417A200303A99 /* LoginState.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C199735240C4878001E9B8B /* HomeView.swift in Sources */,
 				9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */,
 				9C199732240C4878001E9B8B /* HomeRouter.swift in Sources */,
 				9C81AD862407D1FF0010FCF5 /* NeoToggleStyle.swift in Sources */,
 				9C199734240C4878001E9B8B /* HomeInteractor.swift in Sources */,
+				9C21D01B241417CC00303A99 /* LoginInput.swift in Sources */,
 				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
 				9C736DA5240EF80A00CAA3F9 /* CurrentValueSubject+Extensions.swift in Sources */,
 				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,

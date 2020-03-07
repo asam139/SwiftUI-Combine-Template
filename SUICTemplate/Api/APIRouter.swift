@@ -32,6 +32,19 @@ enum APIRouter: URLRequestConvertible {
         return [:]
     }
 
+    var parameterEncoding: ParameterEncoding {
+        return JSONEncoding.default
+    }
+
+    var decoder: DataDecoder {
+        let json = JSONDecoder()
+        switch self {
+        case .login:
+            json.dateDecodingStrategy = .iso8601
+        }
+        return json
+    }
+
     // MARK: URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
         let url = try APIRouter.baseURLString.asURL()
@@ -53,8 +66,7 @@ enum APIRouter: URLRequestConvertible {
         }
 
         // Encode body
-        //urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-        urlRequest = try JSONEncoding.default.encode(urlRequest, with: body)
+        urlRequest = try parameterEncoding.encode(urlRequest, with: body)
 
         return urlRequest
     }

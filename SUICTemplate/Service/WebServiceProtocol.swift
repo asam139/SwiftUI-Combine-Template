@@ -17,21 +17,18 @@ protocol WebServiceProtocol {
 
 extension WebServiceProtocol {
     @discardableResult
-    func performRequestDecodable<T: Decodable>(
-        route: APIRouter,
-        decoder: JSONDecoder = JSONDecoder()) -> AnyPublisher<T, AFError> {
+    func performRequestDecodable<T: Decodable>(route: APIRouter) -> AnyPublisher<T, AFError> {
         return self.session
             .request(route)
             .validate()
-            .futureDecodableWithError(of: T.self, queue: bgQueue, decoder: decoder)
+            .futureDecodableWithError(of: T.self, queue: bgQueue, decoder: route.decoder)
             .eraseToAnyPublisher()
     }
 
     @discardableResult
-    func performUploadDecodable<T: Decodable>(
-        route: APIRouter,
-        decoder: JSONDecoder = JSONDecoder()
-    ) -> (AnyPublisher<T, AFError>, PassthroughSubject<Progress, Never>) {
+    func performUploadDecodable<T: Decodable>(route: APIRouter) -> (
+        AnyPublisher<T, AFError>, PassthroughSubject<Progress, Never>
+    ) {
         let progressSubject = PassthroughSubject<Progress, Never>()
         let publisher = self.session
             .upload(multipartFormData: route.multipartFormData, with: route)
@@ -39,17 +36,15 @@ extension WebServiceProtocol {
                 progressSubject.send(progress)
             })
             .validate()
-            .futureDecodableWithError(of: T.self, queue: bgQueue, decoder: decoder)
+            .futureDecodableWithError(of: T.self, queue: bgQueue, decoder: route.decoder)
             .eraseToAnyPublisher()
         return (publisher: publisher, progressSubject: progressSubject)
     }
 
-    func performRequest(
-        route: APIRouter) -> AnyPublisher<Any, AFError> {
+    func performRequest(route: APIRouter) -> AnyPublisher<Any, AFError> {
         return self.session
             .request(route)
             .validate()
             .futureJSONWithError(queue: bgQueue).eraseToAnyPublisher()
     }
 }
-

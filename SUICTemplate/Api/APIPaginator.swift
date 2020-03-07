@@ -10,10 +10,11 @@ import Foundation
 import Alamofire
 import Combine
 
-class APIPaginator<T: Decodable, P: Pagination> {
+class APIPaginator<T: Decodable, P: Pagination>: WebServiceProtocol {
     private var disposables = Set<AnyCancellable>()
 
-    private var apiClient: APIClient
+    var session: Session
+    var bgQueue: DispatchQueue
     private var pagination: P
     typealias RouteCreator = (P) -> APIRouter?
     private var routeCreator: RouteCreator
@@ -26,11 +27,13 @@ class APIPaginator<T: Decodable, P: Pagination> {
     @Published private(set) var objects: [T] = []
     @Published private(set) var page: Int = -1
 
-    init(apiClient: APIClient,
+    init(session: Session,
+         queue: DispatchQueue = DispatchQueue.main,
          pagination: P,
          routeCreator: @escaping RouteCreator,
          paginationUpdater: @escaping PaginationUpdater) {
-        self.apiClient = apiClient
+        self.session = session
+        self.bgQueue = queue
         self.pagination = pagination
         self.routeCreator = routeCreator
         self.paginationUpdater = paginationUpdater
@@ -47,7 +50,7 @@ class APIPaginator<T: Decodable, P: Pagination> {
         }
 
         loading = true
-        let future: AnyPublisher<[T], AFError> = apiClient.performRequestDecodable(route: route)
+        let future: AnyPublisher<[T], AFError> = self.performRequestDecodable(route: route)
         future.sink(receiveCompletion: { [weak self] value in
             guard let self = self else { return }
             switch value {

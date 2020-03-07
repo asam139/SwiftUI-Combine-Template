@@ -25,7 +25,6 @@
 		9C628CDB23FB16A4005F8F06 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9C628CDA23FB16A4005F8F06 /* Alamofire */; };
 		9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CDD23FB178A005F8F06 /* StoragePropertyWrapper.swift */; };
 		9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE023FB1851005F8F06 /* APIPaginator.swift */; };
-		9C628CE523FB1851005F8F06 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE123FB1851005F8F06 /* APIClient.swift */; };
 		9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE223FB1851005F8F06 /* APIRouter.swift */; };
 		9C628CE723FB1851005F8F06 /* AccessTokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */; };
 		9C628CE923FB1A44005F8F06 /* PaginationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628CE823FB1A44005F8F06 /* PaginationModel.swift */; };
@@ -78,7 +77,6 @@
 		9C3E924523F71255009ADA6E /* LoginAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationModifier.swift; sourceTree = "<group>"; };
 		9C628CDD23FB178A005F8F06 /* StoragePropertyWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoragePropertyWrapper.swift; sourceTree = "<group>"; };
 		9C628CE023FB1851005F8F06 /* APIPaginator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIPaginator.swift; sourceTree = "<group>"; };
-		9C628CE123FB1851005F8F06 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9C628CE223FB1851005F8F06 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenInterceptor.swift; sourceTree = "<group>"; };
 		9C628CE823FB1A44005F8F06 /* PaginationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaginationModel.swift; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				9C628CE223FB1851005F8F06 /* APIRouter.swift */,
-				9C628CE123FB1851005F8F06 /* APIClient.swift */,
 				9C628CE023FB1851005F8F06 /* APIPaginator.swift */,
 				9C628CE323FB1851005F8F06 /* AccessTokenInterceptor.swift */,
 			);
@@ -496,7 +493,6 @@
 				9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
 				9CE74C22240195B7001D9369 /* LoginInteractor.swift in Sources */,
-				9C628CE523FB1851005F8F06 /* APIClient.swift in Sources */,
 				9C736DA3240EF64000CAA3F9 /* AnyCancellable+Extensions.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C199735240C4878001E9B8B /* HomeView.swift in Sources */,

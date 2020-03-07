@@ -17,9 +17,8 @@ protocol LoginServiceProtocol: WebServiceProtocol {
 final class LoginService: LoginServiceProtocol {
     var session: Session
     let bgQueue = DispatchQueue(label: "bg_parse_queue")
-    let bag = CancellableBag()
 
-    init(session: Session) {
+    init(session: Session = Session.default) {
         self.session = session
     }
 

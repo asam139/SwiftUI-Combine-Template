@@ -47,13 +47,10 @@
 		9C974B9823F1DBDE006AC63A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9723F1DBDE006AC63A /* Preview Assets.xcassets */; };
 		9C974B9B23F1DBDE006AC63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9923F1DBDE006AC63A /* LaunchScreen.storyboard */; };
 		9C974BA423F1DCCF006AC63A /* Viperit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C974BA323F1DCCF006AC63A /* Viperit */; };
-		9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA523F1DD1D006AC63A /* LoginPresenter.swift */; };
-		9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA723F1DD1D006AC63A /* LoginModuleApi.swift */; };
 		9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA923F1DD1D006AC63A /* LoginView.swift */; };
 		9C987FA823F332A5002E104D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C987FA723F332A5002E104D /* Constants.swift */; };
 		9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE74C1B240165D0001D9369 /* UserToken.swift */; };
 		9CE74C21240192E5001D9369 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE74C20240192E5001D9369 /* Environment.swift */; };
-		9CE74C22240195B7001D9369 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */; };
 		B401CEC723F9BBA400CD6356 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B401CEC623F9BBA400CD6356 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,9 +97,6 @@
 		9C974B9723F1DBDE006AC63A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C974B9A23F1DBDE006AC63A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C974B9C23F1DBDE006AC63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C974BA523F1DD1D006AC63A /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		9C974BA723F1DD1D006AC63A /* LoginModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModuleApi.swift; sourceTree = "<group>"; };
-		9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		9C974BA923F1DD1D006AC63A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		9C987FA723F332A5002E104D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9CE74C1B240165D0001D9369 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
@@ -193,7 +187,7 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		9C81AD6D2407CDA30010FCF5 /* Views */ = {
+		9C81AD6D2407CDA30010FCF5 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				9C81AD732407CF990010FCF5 /* Backgrounds */,
@@ -201,7 +195,7 @@
 				9C81AD792407D1250010FCF5 /* Toogle */,
 				9C19971B240BCC05001E9B8B /* NeoColors.swift */,
 			);
-			path = Views;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		9C81AD6E2407CDC70010FCF5 /* Extensions */ = {
@@ -293,7 +287,7 @@
 				9C974BB623F1E79A006AC63A /* Model */,
 				9C736D9B240EEE2A00CAA3F9 /* Service */,
 				9C974BB723F1E7A8006AC63A /* View */,
-				9C81AD6D2407CDA30010FCF5 /* Views */,
+				9C81AD6D2407CDA30010FCF5 /* Components */,
 				9C81AD7C2407D1860010FCF5 /* Styles */,
 				9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */,
 				9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */,
@@ -317,9 +311,6 @@
 			isa = PBXGroup;
 			children = (
 				B401CEC623F9BBA400CD6356 /* LoginViewModel.swift */,
-				9C974BA523F1DD1D006AC63A /* LoginPresenter.swift */,
-				9C974BA723F1DD1D006AC63A /* LoginModuleApi.swift */,
-				9C974BA823F1DD1D006AC63A /* LoginInteractor.swift */,
 				9C3E923E23F70B2E009ADA6E /* View */,
 			);
 			path = Login;
@@ -489,14 +480,11 @@
 			files = (
 				9C81AD722407CEE60010FCF5 /* LinearGradient+Extensions.swift in Sources */,
 				9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */,
-				9C974BAA23F1DD1D006AC63A /* LoginPresenter.swift in Sources */,
 				9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
-				9CE74C22240195B7001D9369 /* LoginInteractor.swift in Sources */,
 				9C736DA3240EF64000CAA3F9 /* AnyCancellable+Extensions.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C199735240C4878001E9B8B /* HomeView.swift in Sources */,
-				9C974BAC23F1DD1D006AC63A /* LoginModuleApi.swift in Sources */,
 				9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */,
 				9C199732240C4878001E9B8B /* HomeRouter.swift in Sources */,
 				9C81AD862407D1FF0010FCF5 /* NeoToggleStyle.swift in Sources */,

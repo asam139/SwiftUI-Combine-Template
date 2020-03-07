@@ -9,16 +9,23 @@
 import SwiftUI
 import Viperit
 
+class LoginState {
+    var loading: Bool = false
+}
+
+enum LoginInput {
+    case requestLogin(email: String, password: String)
+}
+
 // MARK: LoginView SwiftUI
 struct LoginView : View {
-    weak var presenter: LoginPresenterApi?
-
-    @EnvironmentObject var loginModel: LoginModel
+    @EnvironmentObject
+    private var viewModel: AnyViewModel<LoginState, LoginInput>
 
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
-                LoginUpperSubview(onLogin: self.onLogin)
+                LoginUpperSubview()
                 Spacer()
                 LoginLowerSubview()
             }
@@ -26,19 +33,12 @@ struct LoginView : View {
         .background(Color.Palette.primary)
         .edgesIgnoringSafeArea(.all)
     }
-
-    func onLogin() {
-        let email = loginModel.email
-        let password = loginModel.password
-        print(email, password)
-        presenter?.onLogin(email: email, password: password)
-    }
 }
 
 #if DEBUG
 struct Login_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(presenter: nil)
+        LoginView()
     }
 }
 #endif

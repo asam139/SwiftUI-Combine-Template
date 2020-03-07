@@ -9,15 +9,6 @@
           "revision": "43f9ebf03413baf1782d7516b4f475f98723cd02",
           "version": null
         }
-      },
-      {
-        "package": "Viperit",
-        "repositoryURL": "https://github.com/ferranabello/Viperit.git",
-        "state": {
-          "branch": null,
-          "revision": "0cd7943fecde68431f896d242f9c7ae3bee0242c",
-          "version": "1.4.4"
-        }
       }
     ]
   },

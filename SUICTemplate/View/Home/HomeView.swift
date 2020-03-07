@@ -7,7 +7,6 @@
 //
 
 import SwiftUI
-import Viperit
 
 var examples: [String] = {
     var numbers: [String] = []
@@ -19,7 +18,6 @@ var examples: [String] = {
 
 // MARK: HomeView SwiftUI
 struct HomeView : View {
-    weak var presenter: HomePresenterApi?
 
     var body: some View {
         NavigationView {

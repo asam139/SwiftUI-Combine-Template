@@ -8,7 +8,6 @@
 
 import SwiftUI
 import Combine
-import Viperit
 
 // MARK: LoginView SwiftUI
 struct LoginView : View {

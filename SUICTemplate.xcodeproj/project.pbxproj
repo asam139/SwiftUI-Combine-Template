@@ -9,10 +9,6 @@
 /* Begin PBXBuildFile section */
 		9C19971C240BCC05001E9B8B /* NeoColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19971B240BCC05001E9B8B /* NeoColors.swift */; };
 		9C19972B240C47AC001E9B8B /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972A240C47AC001E9B8B /* SignUpModel.swift */; };
-		9C199731240C4878001E9B8B /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972C240C4878001E9B8B /* HomePresenter.swift */; };
-		9C199732240C4878001E9B8B /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972D240C4878001E9B8B /* HomeRouter.swift */; };
-		9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972E240C4878001E9B8B /* HomeModuleApi.swift */; };
-		9C199734240C4878001E9B8B /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C19972F240C4878001E9B8B /* HomeInteractor.swift */; };
 		9C199735240C4878001E9B8B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C199730240C4878001E9B8B /* HomeView.swift */; };
 		9C21D01524118B7600303A99 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01424118B7600303A99 /* WebServiceProtocol.swift */; };
 		9C21D0172411A13D00303A99 /* DataRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */; };
@@ -48,7 +44,6 @@
 		9C974B9523F1DBDE006AC63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9423F1DBDE006AC63A /* Assets.xcassets */; };
 		9C974B9823F1DBDE006AC63A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9723F1DBDE006AC63A /* Preview Assets.xcassets */; };
 		9C974B9B23F1DBDE006AC63A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C974B9923F1DBDE006AC63A /* LaunchScreen.storyboard */; };
-		9C974BA423F1DCCF006AC63A /* Viperit in Frameworks */ = {isa = PBXBuildFile; productRef = 9C974BA323F1DCCF006AC63A /* Viperit */; };
 		9C974BAE23F1DD1D006AC63A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C974BA923F1DD1D006AC63A /* LoginView.swift */; };
 		9C987FA823F332A5002E104D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C987FA723F332A5002E104D /* Constants.swift */; };
 		9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE74C1B240165D0001D9369 /* UserToken.swift */; };
@@ -59,10 +54,6 @@
 /* Begin PBXFileReference section */
 		9C19971B240BCC05001E9B8B /* NeoColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeoColors.swift; sourceTree = "<group>"; };
 		9C19972A240C47AC001E9B8B /* SignUpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
-		9C19972C240C4878001E9B8B /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
-		9C19972D240C4878001E9B8B /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
-		9C19972E240C4878001E9B8B /* HomeModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleApi.swift; sourceTree = "<group>"; };
-		9C19972F240C4878001E9B8B /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		9C199730240C4878001E9B8B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9C21D01424118B7600303A99 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
 		9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extensions.swift"; sourceTree = "<group>"; };
@@ -115,7 +106,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C974BA423F1DCCF006AC63A /* Viperit in Frameworks */,
 				9C628CDB23FB16A4005F8F06 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,7 +180,7 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		9C81AD6D2407CDA30010FCF5 /* Components */ = {
+		9C81AD6D2407CDA30010FCF5 /* Component */ = {
 			isa = PBXGroup;
 			children = (
 				9C81AD732407CF990010FCF5 /* Backgrounds */,
@@ -198,7 +188,7 @@
 				9C81AD792407D1250010FCF5 /* Toogle */,
 				9C19971B240BCC05001E9B8B /* NeoColors.swift */,
 			);
-			path = Components;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		9C81AD6E2407CDC70010FCF5 /* Extensions */ = {
@@ -290,7 +280,7 @@
 				9C974BB623F1E79A006AC63A /* Model */,
 				9C736D9B240EEE2A00CAA3F9 /* Service */,
 				9C974BB723F1E7A8006AC63A /* View */,
-				9C81AD6D2407CDA30010FCF5 /* Components */,
+				9C81AD6D2407CDA30010FCF5 /* Component */,
 				9C81AD7C2407D1860010FCF5 /* Styles */,
 				9C974B8E23F1DBDE006AC63A /* AppDelegate.swift */,
 				9C974B9023F1DBDE006AC63A /* SceneDelegate.swift */,
@@ -353,10 +343,6 @@
 		B401CECA23F9BF6200CD6356 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9C19972C240C4878001E9B8B /* HomePresenter.swift */,
-				9C19972D240C4878001E9B8B /* HomeRouter.swift */,
-				9C19972E240C4878001E9B8B /* HomeModuleApi.swift */,
-				9C19972F240C4878001E9B8B /* HomeInteractor.swift */,
 				9C199730240C4878001E9B8B /* HomeView.swift */,
 			);
 			path = Home;
@@ -381,7 +367,6 @@
 			);
 			name = SUICTemplate;
 			packageProductDependencies = (
-				9C974BA323F1DCCF006AC63A /* Viperit */,
 				9C628CDA23FB16A4005F8F06 /* Alamofire */,
 			);
 			productName = "SwiftUI-Combine-Template";
@@ -414,7 +399,6 @@
 			);
 			mainGroup = 9C974B8223F1DBDD006AC63A;
 			packageReferences = (
-				9C974BA223F1DCCF006AC63A /* XCRemoteSwiftPackageReference "Viperit" */,
 				9C628CD923FB16A4005F8F06 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 9C974B8C23F1DBDE006AC63A /* Products */;
@@ -486,23 +470,19 @@
 			files = (
 				9C81AD722407CEE60010FCF5 /* LinearGradient+Extensions.swift in Sources */,
 				9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */,
-				9C199733240C4878001E9B8B /* HomeModuleApi.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
 				9C736DA3240EF64000CAA3F9 /* AnyCancellable+Extensions.swift in Sources */,
 				9C21D019241417A200303A99 /* LoginState.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C199735240C4878001E9B8B /* HomeView.swift in Sources */,
 				9C628CE623FB1851005F8F06 /* APIRouter.swift in Sources */,
-				9C199732240C4878001E9B8B /* HomeRouter.swift in Sources */,
 				9C81AD862407D1FF0010FCF5 /* NeoToggleStyle.swift in Sources */,
-				9C199734240C4878001E9B8B /* HomeInteractor.swift in Sources */,
 				9C21D01B241417CC00303A99 /* LoginInput.swift in Sources */,
 				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
 				9C736DA5240EF80A00CAA3F9 /* CurrentValueSubject+Extensions.swift in Sources */,
 				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,
 				9C81AD702407CE560010FCF5 /* Color+Palette.swift in Sources */,
 				9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */,
-				9C199731240C4878001E9B8B /* HomePresenter.swift in Sources */,
 				9C736DA9240EF85B00CAA3F9 /* Subscribers+Extensions.swift in Sources */,
 				9C21D0172411A13D00303A99 /* DataRequest+Extensions.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
@@ -744,14 +724,6 @@
 				kind = branch;
 			};
 		};
-		9C974BA223F1DCCF006AC63A /* XCRemoteSwiftPackageReference "Viperit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ferranabello/Viperit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.4.4;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -759,11 +731,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9C628CD923FB16A4005F8F06 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		9C974BA323F1DCCF006AC63A /* Viperit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9C974BA223F1DCCF006AC63A /* XCRemoteSwiftPackageReference "Viperit" */;
-			productName = Viperit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

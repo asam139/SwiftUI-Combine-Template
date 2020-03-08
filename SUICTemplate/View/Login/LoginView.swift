@@ -12,11 +12,14 @@ import Combine
 // MARK: LoginView SwiftUI
 struct LoginView : View {
     @EnvironmentObject
-    var viewModel: LoginViewModel
+    private var viewModel: LoginViewModel
 
     var body: some View {
         ScrollView {
             VStack(spacing: 0) {
+                NavigationLink(destination: HomeView(), isActive: .constant(true)) {
+                    EmptyView()
+                }
                 LoginUpperSubview()
                 Spacer()
                 LoginLowerSubview()

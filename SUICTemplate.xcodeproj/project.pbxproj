@@ -14,6 +14,9 @@
 		9C21D0172411A13D00303A99 /* DataRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */; };
 		9C21D019241417A200303A99 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D018241417A200303A99 /* LoginState.swift */; };
 		9C21D01B241417CC00303A99 /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01A241417CC00303A99 /* LoginInput.swift */; };
+		9C21D01D24141ADA00303A99 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01C24141ADA00303A99 /* HomeViewModel.swift */; };
+		9C21D01F24141B0F00303A99 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01E24141B0F00303A99 /* HomeState.swift */; };
+		9C21D02124141B2A00303A99 /* HomeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D02024141B2A00303A99 /* HomeInput.swift */; };
 		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
 		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
 		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
@@ -59,6 +62,9 @@
 		9C21D0162411A13D00303A99 /* DataRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataRequest+Extensions.swift"; sourceTree = "<group>"; };
 		9C21D018241417A200303A99 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		9C21D01A241417CC00303A99 /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
+		9C21D01C24141ADA00303A99 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9C21D01E24141B0F00303A99 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
+		9C21D02024141B2A00303A99 /* HomeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInput.swift; sourceTree = "<group>"; };
 		9C3E923323F5E10E009ADA6E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -343,7 +349,10 @@
 		B401CECA23F9BF6200CD6356 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C21D01E24141B0F00303A99 /* HomeState.swift */,
+				9C21D02024141B2A00303A99 /* HomeInput.swift */,
 				9C199730240C4878001E9B8B /* HomeView.swift */,
+				9C21D01C24141ADA00303A99 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -479,14 +488,17 @@
 				9C81AD862407D1FF0010FCF5 /* NeoToggleStyle.swift in Sources */,
 				9C21D01B241417CC00303A99 /* LoginInput.swift in Sources */,
 				9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */,
+				9C21D02124141B2A00303A99 /* HomeInput.swift in Sources */,
 				9C736DA5240EF80A00CAA3F9 /* CurrentValueSubject+Extensions.swift in Sources */,
 				9C3E924223F70B66009ADA6E /* LoginLowerSubview.swift in Sources */,
 				9C81AD702407CE560010FCF5 /* Color+Palette.swift in Sources */,
 				9CE74C1C240165D0001D9369 /* UserToken.swift in Sources */,
 				9C736DA9240EF85B00CAA3F9 /* Subscribers+Extensions.swift in Sources */,
+				9C21D01F24141B0F00303A99 /* HomeState.swift in Sources */,
 				9C21D0172411A13D00303A99 /* DataRequest+Extensions.swift in Sources */,
 				9C974B9123F1DBDE006AC63A /* SceneDelegate.swift in Sources */,
 				9C736D9A240EEAB400CAA3F9 /* ViewModel.swift in Sources */,
+				9C21D01D24141ADA00303A99 /* HomeViewModel.swift in Sources */,
 				9C736DA1240EF61F00CAA3F9 /* CancellableBag.swift in Sources */,
 				9C19971C240BCC05001E9B8B /* NeoColors.swift in Sources */,
 				B401CEC723F9BBA400CD6356 /* LoginViewModel.swift in Sources */,

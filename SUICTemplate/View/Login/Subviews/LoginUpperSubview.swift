@@ -81,9 +81,10 @@ struct LoginUpperSubview : View {
         .background(Color.Palette.surfaceLight)
         .opacity(animate ? 1 : 0)
         .clipShape(
-            RoundedRectangle(
-                cornerRadius: animate && isScreenTall ? 30 : 0,
-                style: .continuous
+            RoundedCorners(
+                tl: 0, tr: 0,
+                bl: animate && isScreenTall ? 30 : 0,
+                br: animate && isScreenTall ? 30 : 0
             )
         )
         .animation(Animation.spring())

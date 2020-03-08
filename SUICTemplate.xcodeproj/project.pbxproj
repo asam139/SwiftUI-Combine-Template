@@ -17,6 +17,7 @@
 		9C21D01D24141ADA00303A99 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01C24141ADA00303A99 /* HomeViewModel.swift */; };
 		9C21D01F24141B0F00303A99 /* HomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D01E24141B0F00303A99 /* HomeState.swift */; };
 		9C21D02124141B2A00303A99 /* HomeInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D02024141B2A00303A99 /* HomeInput.swift */; };
+		9C21D024241510EE00303A99 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C21D023241510EE00303A99 /* RoundedCorners.swift */; };
 		9C3E923423F5E10E009ADA6E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923323F5E10E009ADA6E /* Localizable.swift */; };
 		9C3E923A23F5E4FC009ADA6E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C3E923C23F5E4FC009ADA6E /* Localizable.strings */; };
 		9C3E924023F70B51009ADA6E /* LoginUpperSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3E923F23F70B51009ADA6E /* LoginUpperSubview.swift */; };
@@ -65,6 +66,7 @@
 		9C21D01C24141ADA00303A99 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		9C21D01E24141B0F00303A99 /* HomeState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeState.swift; sourceTree = "<group>"; };
 		9C21D02024141B2A00303A99 /* HomeInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInput.swift; sourceTree = "<group>"; };
+		9C21D023241510EE00303A99 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		9C3E923323F5E10E009ADA6E /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		9C3E923523F5E2D3009ADA6E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		9C3E923B23F5E4FC009ADA6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 				9C19972A240C47AC001E9B8B /* SignUpModel.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		9C21D022241510C700303A99 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				9C21D023241510EE00303A99 /* RoundedCorners.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 		9C3E923223F5E0FF009ADA6E /* Localizable */ = {
@@ -189,6 +199,7 @@
 		9C81AD6D2407CDA30010FCF5 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				9C21D022241510C700303A99 /* Shapes */,
 				9C81AD732407CF990010FCF5 /* Backgrounds */,
 				9C81AD782407D11C0010FCF5 /* Buttons */,
 				9C81AD792407D1250010FCF5 /* Toogle */,
@@ -481,6 +492,7 @@
 				9C628CE423FB1851005F8F06 /* APIPaginator.swift in Sources */,
 				9C974B8F23F1DBDE006AC63A /* AppDelegate.swift in Sources */,
 				9C736DA3240EF64000CAA3F9 /* AnyCancellable+Extensions.swift in Sources */,
+				9C21D024241510EE00303A99 /* RoundedCorners.swift in Sources */,
 				9C21D019241417A200303A99 /* LoginState.swift in Sources */,
 				9C628CDE23FB178A005F8F06 /* StoragePropertyWrapper.swift in Sources */,
 				9C199735240C4878001E9B8B /* HomeView.swift in Sources */,

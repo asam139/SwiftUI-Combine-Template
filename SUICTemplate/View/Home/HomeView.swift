@@ -30,18 +30,18 @@ struct HomeView : View {
             .navigationBarTitle("List")
             .navigationBarItems(trailing:
                 HStack {
-                    VStack { Image(systemName: "person.crop.circle") }
-                        .frame(width: 44, height: 44)
-                        .background(Color("button"))
-                        .foregroundColor(Color.primary)
-                        .cornerRadius(22)
-                        .onTapGesture { self.showLogin.toggle() }
+                    Button(action: {
+                        self.showLogin.toggle()
+                    }, label: {
+                        Image(systemName: "person.crop.circle")
+                            .padding(.all, 8)
+                    })
+                    .buttonStyle(NeoButtonStyle(shape: Circle()))
+                    .sheet(isPresented: $showLogin) {
+                        LoginView().environmentObject(LoginViewModel(loginService: LoginService()))
+                    }
                 }
             )
-            .sheet(isPresented: $showLogin) {
-                LoginView().environmentObject(LoginViewModel(loginService: LoginService()))
-            }
         }
-
     }
 }
